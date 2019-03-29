@@ -1,0 +1,28 @@
+<view class="container">
+   <view >
+     <view class='nav'>
+      <view class='tab {{index==0 ? "active" : ""}}'  bindtap='handClick' data-index="0" data-type="">全部</view>
+      <view class='tab {{index==1 ? "active" : ""}}'  bindtap='handClick' data-index="1" data-type="2">充值</view>
+      <view class='tab {{index==2? "active" : ""}}' bindtap='handClick' data-index="2" data-type="1">消费</view>
+      <view class="tabBarIcon" style='left:{{left}}rpx;'></view>
+     </view>
+  
+  </view>
+  <view class="main">
+    <navigator class="item" wx:for="{{tradeList}}" wx:key="{{index}}" wx:for-item="item" url="/pages/ucenter/tradeDetails/tradeDetails?id={{item.id}}">
+      <view class="left">
+        <view class="title">{{item.category}}</view>
+        <view class="time">{{item.handlerTime}}</view>
+      </view>
+      <view class="right">
+        <view class='warper'>
+           <view class="sum">{{item.type=="1" ? '-' : '+'}}{{item.money}}</view>
+           <view class="status">支付成功</view>
+        </view>
+        <view>
+           <image src="../../../static/icon/mine/icon_xiayiye@2x.png" class='icon'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
