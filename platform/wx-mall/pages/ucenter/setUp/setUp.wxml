@@ -1,0 +1,9 @@
+<view class="container">
+   <view class="item" wx:for="{{rows}}" wx:key="{{index}}" wx:for-item="item" bindtap="handlerBind" data-index="{{index}}">
+    <view class="font title">{{item.title}}</view>
+    <view class="backPart" >
+      <text class="font tips" wx:if="{{item.tips}}" >{{item.tips}}</text>
+        <image  class="back" src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181220/103321832e9774.png'></image>
+    </view>
+   </view>
+</view> 

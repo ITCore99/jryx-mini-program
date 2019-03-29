@@ -1,0 +1,14 @@
+<view class='container'>
+  <view class='main'>
+    <view class='item'>
+      <view class='title'>卡号</view>
+      <input type='number' placeholder='请输入卡号' placeholder-class='input' class='inputText' bindinput='cardIdInput' />
+    </view>
+    <view class='item'>
+      <view class='title'>预留手机号</view>
+      <input type='number' placeholder='请输入预留手机号' placeholder-class='input' class='inputText' bindinput='phoneInput' />
+    </view>
+  </view>
+  <view class="btn" bindtap='handAdd'>添加</view>
+</view>
+

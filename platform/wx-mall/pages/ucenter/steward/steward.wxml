@@ -1,0 +1,22 @@
+<view class="container">
+  <view class=" box topBox">
+    <view>
+      <image class="avatar" src="{{info.avator ? info.avator : 'http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/141820656ee9f.png'}}"></image>
+    </view>
+    <text class="font name">{{info.name}}</text>
+    <text class="font class">{{info.desc ?  info.desc : '官方商旅管家'}}</text>
+    <text class="font phone" decode="{{true}}">热线：{{info.phone}}</text>
+    <text class="font email"decode="{{true}}">邮箱：{{info.email}}</text>
+    <view class="desc">
+      <text class=" font introduce"  decode="{{true}}">愿景：</text>
+      <text class=" font details"    decode="{{true}}">在世界的每一个地方
+每一个角落
+都有假日优选的服务网络
+让客户体验高品质的假期生活</text>
+    </view>
+    <text class="slogan">用心带您领略精彩世界！</text>
+  </view>
+  <view class=" box middleBox"></view>
+  <view class=" box bottomBox"></view>
+  <view class="btn" bindtap='AddNewCard'>我的商旅管家</view>
+</view>

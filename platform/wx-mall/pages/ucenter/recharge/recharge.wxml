@@ -1,0 +1,51 @@
+<view class="container">
+  <view wx:for="{{cardInfo}}" wx:key="{{index}}" wx:for-item="item">
+      <view class='card' wx:if="{{item.type==1}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName">{{item.name}}</text>
+    </view>
+    <view class='card family' wx:if="{{item.type==2}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName">{{item.name}}</text>
+    </view>
+    <view class='card businness' wx:if="{{item.type==3}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName ">{{item.name}}</text>
+    </view>
+    <view class='card company'  wx:if="{{item.type==4}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName ">{{item.name}}</text>
+    </view>
+  </view>
+  <view class="priceContainer" >
+    <text class='font text'>充值：</text>
+    <input placeholder='充值数目'  class='font input' placeholder-class='font placeholder' bindinput='bindInput'/>
+    <text class='font text' >元</text>
+  </view>
+  <view class="totalMOney">
+    <text class='font '>余额：</text>
+    <text class='font money'>{{totalMoney}}</text>
+    <text class='font '>元</text>
+  </view>
+<view class="HandlerBtn" bindtap='getRechargeOrderId'>充值</view>
+</view>

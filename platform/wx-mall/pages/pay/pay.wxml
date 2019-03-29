@@ -1,0 +1,88 @@
+<view class="container">
+    <view class="total">
+      <view class="label">订单金额</view>
+      <view class="txt">{{actualPrice}}元</view>
+    </view>
+    <view class="pay-list">
+        <view class="h">请选择支付方式</view>
+        <view class="b">
+            <!--<view class="item">
+                <view class="checkbox checked"></view>
+                <view class="icon-alipay"></view>
+                <view class="name">支付宝</view>
+            </view>
+            <view class="item">
+                <view class="checkbox"></view>
+                <view class="icon-net"></view>
+                <view class="name">网易支付</view>
+            </view>-->
+            <view class="item">
+                <view class="checkbox checked"></view>
+                <!-- <image src="/static/images/wxpay.png" class="icon"></image> -->
+                <view class="name">余额支付</view>
+            </view>
+        </view>
+    </view>
+    <view class="tips">温馨提示：目前小程序可以支持余额支付和微信支付</view>
+    <view class="pay-btn" bindtap="startPay">确定</view>
+
+   <!--支付弹窗-->
+    <view class="popupContainer" wx:if="{{popupFlag}}">
+    <view class="price"><text class="font priceIcon">¥</text><text class="font priceNum">{{actualPrice}}</text></view>
+    <view class="font orderDesc ">{{checkedGoodsList[0].goods_name}}</view>
+      <view class="cardContainer">
+        <view wx:for="{{cardList}}" wx:for-item="item" wx:key="{{index}}">
+            <view class="card" wx:if="{{item.type==1}}" style='opacity:{{item.lack ? "0.6" : ""}};' >
+              <view class="cardLeft">
+                <view >
+                   <image src="../../static/icon/mine/gerenka2@2x.png" class="icon"></image> 
+                </view>
+                <view class="font cardName">{{item.name}}</view>
+                <view class="font tipss" wx:if="{{item.lack}}">（余额不足）</view>
+              </view>
+              <view  catchtap='{{item.lack ? "" : "getCardID"}}' data-id="5" data-index="{{index}}">
+                <image  class="radioBox" src="{{item.checked ? '../../static/icon/mine/2323@2x.png' : ''}}"></image>
+              </view>
+            </view>
+            <view class="card"  wx:if="{{item.type==2}}" style='opacity:{{item.lack ? "0.6" : ""}};' >
+              <view class="cardLeft">
+                <view>
+                  <image src="../../static/icon/mine/jiatingka2@2x.png" class="icon"></image> 
+                </view>
+                <view class="font cardName">{{item.name}}</view>
+                <view class="font tipss" wx:if="{{item.lack}}">（余额不足）</view>
+              </view>
+              <view  catchtap='{{item.lack ? "" : "getCardID"}}' data-id="5" data-index="{{index}}">
+                <image  class="radioBox" src="{{item.checked ? '../../static/icon/mine/2323@2x.png' : ''}}"></image>
+              </view>
+            </view>
+            <view class="card"  wx:if="{{item.type==3}}" style='opacity:{{item.lack ? "0.6" : ""}};'>
+              <view class="cardLeft">
+                <view>
+                  <image src="../../static/icon/mine/shangwuka2@2x.png" class="icon"></image> 
+                </view>
+                <view class="font cardName">{{item.name}}</view>
+                <view class="font tipss" wx:if="{{item.lack}}">（余额不足）</view>
+              </view>
+                <view  catchtap='{{item.lack ? "" : "getCardID"}}' data-id="5" data-index="{{index}}" >
+                <image  class="radioBox" src="{{item.checked ? '../../static/icon/mine/2323@2x.png' : ''}}"></image>
+              </view>
+            </view>
+            <view class="card"  wx:if="{{item.type==4}}" style='opacity:{{item.lack ? "0.6" : ""}};'>
+              <view class="cardLeft">
+                <view>
+                  <image src="../../static/icon/mine/qiyeka2@2x.png" class="icon"></image> 
+                </view>
+                <view class="font cardName">企业荣耀卡</view>
+                <view class="font tipss" wx:if="{{item.lack}}">（余额不足）</view>
+              </view>
+              <view  catchtap='{{item.lack ? "" : "getCardID"}}' data-id="5" data-index="{{index}}" >
+                <image  class="radioBox" src="{{item.checked ? '../../static/icon/mine/2323@2x.png' : ''}}"></image>
+              </view>
+            </view>
+        </view>
+      </view>
+    <view class="btn" bindtap='requestPayParam'>确认支付</view>
+</view>
+    <view class="mask" wx:if="{{popupFlag}}" bindtap='cancelPay'></view>
+</view>

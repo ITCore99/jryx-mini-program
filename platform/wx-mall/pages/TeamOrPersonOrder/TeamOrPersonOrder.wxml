@@ -1,0 +1,62 @@
+<view class="container">
+  <image src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181225/155902318a4056.png" class="topImg"></image>
+  <view class="topBar">
+      <view class=" font item" bindtap="handlerClick" data-index="0">私人订制</view>
+      <view class=" font item active" wx:if="{{personShow}}">私人订制</view>
+      <view class=" font item" bindtap="handlerClick" data-index="1">团体订制</view>
+       <view class=" item TeamActive" wx:if="{{teamShow}}"><text class="font  roate">团体订制</text></view>
+  </view>
+  <view class="main">
+  <form bindsubmit="formSubmit" >
+      <view class="mainContainer">
+      <view class="destination">
+        <input class="font commom from" placeholder='北京' placeholder-class='font commom placeholder' name="startPlace"></input>
+        <image class="icon" src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181227/1640111576c82e.png"></image>
+        <input class="font commom to" placeholder='目的地'  placeholder-class='font commom placeholder' name="endPlace" ></input>
+      </view>
+      <view class="row">
+         <picker mode="date" value="{{startTimeF}}" start="{{startTime}}"  name="startTimeF" bindchange='bindDateChange' end="2020-01-01">
+          <view class="font">{{startTimeF}}</view>
+        </picker>
+      </view>
+      <view class="row ">
+        <picker mode="date" value="{{endTimeF}}" start="{{startTime}}" end="2020-01-01" name="endTimeF" bindchange='bindDateChangeEnd'>
+          <view class="font">{{endTimeF}}</view>
+        </picker>
+      </view>
+      <view class="row type" wx:if="{{personShow}}">
+         <view class='typeComomn' wx:for="{{counter}}" wx:key="{{index}}" wx:for-item="item">
+           <input type="number" class="font input" placeholder='0' placeholder-class='font placeholder' name="{{item.name}}"></input><text class='font' style='margin-left:5rpx;'>{{item.title}}</text>
+         </view>
+      </view>
+      <view class="row" wx:else>
+         <view class='typeComomn'>
+           <text class='font' style='margin-right:10rpx;'>出行人数</text>
+           <input type="number" class="font input" placeholder='0' placeholder-class='font placeholder' name="man" style='width:80rpx;height:80rpx;'></input>
+         </view>
+      </view>
+      <view class="row font budget" style="border:none">
+       <text class="font">人均预算</text>
+       <input type="number" class="font input" placeholder='2000' placeholder-class='font placeholder' name="budget" ></input>
+       <text class="font">元</text>
+      </view>
+      <view >
+        <textarea class="font  textarea" placeholder='请输入你的需求' placeholder-class='font  placeholder' name="remark"></textarea>
+      </view>
+      <view class="dashed"></view>
+      <view class="left Circle"></view>
+      <view class="right Circle"></view>
+      <view class="row linkMan">
+        <view class=" font name">联系人</view>
+        <input class=" font input" placeholder='张三' name="name" placeholder-class='font name linkmanholder'></input>
+      </view>
+      <view class="row linkMan" style='border:none'>
+        <view class=" font name">手机号</view>
+        <input class=" font input" placeholder='请输入手机号' name="phone" placeholder-class='font name linkmanholder' type="number"></input>
+      </view>
+    <button class="btn" form-type='submit'>免费订制</button>  
+    </view>
+  </form>
+  </view>
+  <image src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181225/16025777669fa3.png" class="bottomImg"></image>
+</view>

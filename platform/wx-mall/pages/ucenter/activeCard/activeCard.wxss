@@ -1,0 +1,172 @@
+page
+{
+  width:100%;
+  height: 100%;
+  background: #FAFAFA;
+}
+.container
+{
+  box-sizing: border-box;
+  padding: 0 24rpx 0 28rpx;
+}
+.container .card
+{
+  width:700rpx;
+  height: 250rpx;
+  background: #409eff;
+  margin-top: 20rpx;
+  border-radius: 7pt;
+  position: relative;
+  box-shadow: -6rpx 5rpx 20rpx rgba(68, 64, 255, 0.7);
+  background-size: 100% 100%;
+  background-image: url("	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/1741408847c213.png")
+}
+.card .balanceTitle
+{
+  font-size: 22rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  color:#FFFEFE;
+  position: absolute;
+  top:42rpx;
+  left:58rpx;
+}
+.card .balanceNumber
+{
+  position: absolute;
+  top:80rpx;
+  left:58rpx;
+}
+.balanceNumber .integer
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 72rpx;
+  font-weight: Regular;
+}
+.balanceNumber .decimals
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+}
+
+.card .cardId
+{
+  position: absolute;
+  top:172rpx;
+  left:58rpx;
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+}
+.specialText
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+  text-shadow: 5rpx 0rpx 5rpx #000;
+}
+ .card .cardName
+ {
+   position: absolute;
+   top:110rpx;
+   right:52rpx;
+   font-family: MicrosoftYaHei;
+   font-weight: Regular;
+   color:#FFFEFE;
+   font-size: 22rpx;
+ }
+.family
+{
+  background-image: url("https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174427107b6cd3.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(112, 17, 230, 0.7) !important;  
+}
+.businness
+{
+  background-image:url("	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174538671577b0.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(25, 25, 25, 0.7)!important;  
+}
+.company
+{
+  background-image: url("https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174626963eff0e.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(10, 10, 10,0.7) !important;  
+
+}
+.mask
+  {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(0, 0,0,0.5);
+    z-index:998;
+  }
+  .toast
+  {
+    width: 460rpx;
+    height: 280rpx;
+    box-sizing: border-box;
+    padding: 28rpx;
+    background: #fff;
+    z-index:1000;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+  }
+  .toast .main
+  {
+    width:304rpx;
+    height:158rpx;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:28rpx;
+    left:36rpx;
+  }
+  .common
+  {
+    font-family: MicrosoftYaHei;
+    font-weight: Regular;
+    color:rgba(53, 53, 53, 1);
+    font-size:28rpx;
+    
+  }
+  .btn
+  {
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    right:38rpx;
+    bottom:36rpx;
+    
+  }
+  .btn .confirm
+  {
+    color:rgba(27, 225, 69, 1);
+    margin-left: 36rpx;
+  }
+  .HandlerBtn
+  {
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:172rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+}

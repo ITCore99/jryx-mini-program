@@ -1,0 +1,67 @@
+page
+{
+  background: rgba(250, 250, 250, 1)
+}
+.font
+{
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+}
+.container
+{
+ padding-top:23rpx;
+}
+.container .item
+{
+  display: flex;
+  width: 690rpx;
+  margin:12rpx 30rpx;
+  background: #fff;
+  box-shadow:0rpx 6rpx 9rpx 0rpx rgba(0, 0, 0, 0.1);
+  border-radius: 8rpx;
+}
+.item .name
+{
+  color:rgba(53, 53, 53, 1);
+  font-size: 28rpx;
+  margin: 25rpx 66rpx 63rpx 19rpx;
+}
+.middle
+{
+  margin-top:28rpx;
+  flex: 1;
+}
+.middle .phone,.middle .id
+{
+  font-size: 24rpx;
+  color:rgba(178, 178, 178, 1);
+  line-height: 36rpx;
+}
+.right 
+{
+  font-size: 24rpx;
+  color:rgba(178, 178, 178, 1);
+  height:40rpx;
+  line-height: 40rpx;
+  border-left:2rpx solid rgba(204, 204, 204, 1);
+  padding-left:20rpx;
+  margin-top:40rpx;
+  margin-right:29rpx;
+
+}
+.btn
+{
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:200rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+}

@@ -1,0 +1,69 @@
+<view class="container">
+  <!--顶部分类选择区-->
+  <view class="searchContainer" id="fliterTab">
+    <view class="search"  bindtap='search'>
+       <image class="icon" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190215/104424298338f7.png"></image>
+       <input class="font input" placeholder='地中海游轮'placeholder-class='font placeholderClass' bindconfirm='' bindinput='' disabled='true'/>
+    </view>
+    <view class="fliter" wx:if="{{id=='1036013'}}">
+      <view class="item" data-category="boardCityId" bindtap='fliterHander'>
+        <text class="font title {{category=='boardCityId' ? 'FiconActive' : ''}}" >{{params.boardCityId.name&&params.boardCityId.value ? params.boardCityId.name : '登船地点'}}</text>
+        <view class="fIcon {{fliterIconState.boardCityId ? 'markIconActive' : '' }}"  ></view>
+      </view>
+        <view class="item" data-category="cruiseCompanyId" bindtap='fliterHander'>
+        <text class="font title {{category=='cruiseCompanyId' ? 'FiconActive' : ''}}">{{params.cruiseCompanyId.name&&params.cruiseCompanyId.value ? params.cruiseCompanyId.name: '热门游轮'}}</text>
+        <view class="fIcon {{fliterIconState.cruiseCompanyId ? 'markIconActive' : '' }}"></view>
+      </view>
+        <view class="item" data-category="startDate" bindtap='fliterHander'>
+        <text class="font title {{category=='startDate' ? 'FiconActive' : ''}}">{{params.startDate.name&&params.startDate.value ? params.startDate.name: '出发时间'}}</text>
+        <view class="fIcon {{fliterIconState.startDate ? 'markIconActive' : '' }}"></view>
+      </view>
+        <view class="item" data-category="days" bindtap='fliterHander'>
+        <text class="font title {{category=='days' ? 'FiconActive' : ''}}">{{params.days.name&&params.days.value ? params.days.name : '行程天数'}}</text>
+        <view class="fIcon {{fliterIconState.days ? 'markIconActive' : '' }}"></view>
+      </view>
+    </view>
+    <view class="selectArea"  style='{{isShow ? "" : "height:360rpx;"}}'>
+       <view class="row" bindtap='selectedHandler' data-name="{{item.name}}"  data-index="{{index}}" data-value="{{item.value}}" data-params="{{category}}" wx:for="{{nowBarData}}" for-item="item" wx:key="{{index}}">
+          <view class="font name {{item.checked ? 'active' : ''}}">{{item.name}}</view>
+          <image class="markIcon" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190215/113732688c9ae7.png" wx:if="{{item.checked}}"></image>
+       </view>
+    </view>
+  </view>
+
+  <!--下方商品展示区-->
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}px" style="height:{{scrollHeight}};margin-top:{{scrollTop}}px;">
+    <view class="cate-item">
+        <!-- <view class="h">
+            <text class="name">{{currentCategory.name}}</text>
+            <text class="desc">{{currentCategory.front_name}}</text>
+        </view> -->
+        <view class="b">
+            <navigator class="item {{(iindex + 1) % 2 == 0 ? 'item-b' : ''}}"   url="/pages/goods/goods?id={{iitem.id}}" wx:for="{{goodsList}}" wx:for-item="iitem" wx:for-index="iindex"  wx:key="{{index}}">
+                <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image>
+                <text class="name">{{iitem.name}}</text>
+                <view class="bottom">
+                    <view style="priceContainer">
+                        <view class="Markprice">￥{{iitem.market_price}}<text style="font-size:20rpx;margin-left:8rpx;color:#353535;">起</text></view>
+                        <view class="price">￥{{iitem.retail_price}}<text style="font-size:20rpx;margin-left:8rpx;color:#FF0000;">起</text></view>
+                    </view>
+                    <image class="tourIcon"  src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/115442478eb713.png">
+                    </image>
+                   
+                </view>
+            </navigator>
+        </view>
+    </view>
+
+  <view wx:if="{{goodsList.length>4}}" class="loadmore">
+      <block wx:if="{{nomore}}">
+        <text>{{nomoreText}}</text>
+      </block>
+      <block wx:else>
+        <text class="iconfont icon-loading loading" space="nbsp"></text>
+        <text> {{loadmoreText}}</text>
+      </block>
+    </view>
+    </scroll-view>
+    <view class="mask" wx:if="{{!isShow}}"></view>
+</view>

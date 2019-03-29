@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "产品详情",
+  "enablePullDownRefresh": false,
+  "usingComponents":{
+    "goHome":"/component/goHome/goHome"
+  }
+}

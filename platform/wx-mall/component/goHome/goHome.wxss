@@ -1,0 +1,10 @@
+.iconImg
+{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: fixed;
+  bottom:10%;
+  right:5%;
+
+}

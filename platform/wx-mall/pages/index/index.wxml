@@ -1,0 +1,168 @@
+<!--index.wxml-->
+<view class="container">
+<view class="branch" wx:if="{{branchSwith}}">
+  <view class="logo"></view>
+  <view class="font branchName" >{{branchName}}</view>
+  <view class="font tips" bindtap='changeBranch'>[切换]</view>
+</view>  
+<view class="bannerSearchContainer">
+<!--轮播图-->   
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="8000" duration="1000" circular="true">
+    <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
+      <navigator url="{{item.link}}">
+        <image src="{{item.image_url}}" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+<!--搜索框-->
+<view class="search" bindtap='search'>
+    <image class='searchIcon' src="/static/icon/shop/shouye_sousuo@2x.png"></image>
+    <input class="searchInput" placeholder='亲子游' bindconfirm='' bindinput='' disabled='true'/>
+</view> 
+
+</view>
+<!--分类展示区-->  
+<view class=" a-topicList" wx:if="{{channelListOne.length > 0}}">
+  <view class="m-menu">
+  <view class='list'>
+    <navigator  class="item" url="{{item.url}}"  wx:for="{{channelListOne}}" wx:key="{{item.id}}">
+      <image src="{{item.icon_url}}" background-size="cover" class='img'></image>
+      <text>{{item.name}}</text>
+    </navigator>
+    </view>
+    <view  class='list'>
+     <navigator  class="item"   url="{{item.url}}"  wx:for="{{channelListTwo}}" wx:key="{{item.id}}">
+      <image src="{{item.icon_url}}" background-size="cover" class='img'></image>
+      <text>{{item.name}}</text>
+    </navigator>
+  </view>  
+  </view>
+ </view>
+<!--会员专区-->
+<view class="vipContainer" style='margin-top:-30rpx;'>
+    <view class='line'></view>
+    <view class='vipTitle'>假日优选俱乐部 </view>
+    <view class="line"></view>
+</view>
+
+ <!--静态轮播图区-->
+ <view class="swiperContainer">
+  <swiper class='swiper' indicator-dots="{{false}}"  circular="{{true}}" previous-margin="40" next-margin="40" bindchange='handlerChange'>
+      <swiper-item class="Swiperitem"  bindtap='jump' data-index="0">
+        <image src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/1912112039e904.png" class="{{current==0 ? 'active':'unActive'}}" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item class="Swiperitem"  bindtap='jump' data-index="1">
+        <image src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/191317141a761b.png" class="{{current==1 ? 'active':'unActive'}}" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item class="Swiperitem"  bindtap='jump' data-index="3">
+        <image src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190117/143805805bb85c.png" class="{{current==2 ? 'active':'unActive'}}" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item class="Swiperitem"  bindtap='jump' data-index="2">
+        <image src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/191341757a7d86.png" class="{{current==3 ? 'active':'unActive'}}" mode="widthFix"></image>
+      </swiper-item>
+  </swiper>
+</view>
+
+<!---精选推荐区-->
+<view class="choiceness">
+  <view class="itemBar" style='margin-left:34rpx;'>
+      <view  class="left">
+         <view class="redIcon"></view>
+         <text class="font targetTitle">精选推荐</text>
+      </view>
+      <view class="moreContainer">
+        <navigator class="font moreText" url="/pages/category/category?id=1036013">查看更多</navigator>
+        <image class="iconBack" src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/105753965fd270.png"></image>
+      </view>
+   </view>
+   <view class="main">
+      <view class="ItemCard" wx:for="{{handpickGoods}}" wx:for-item="item" wx:key="{{index}}" data-id="{{item.id}}"  bindtap='handlerClick'>
+      <image class="image" src="{{item.list_pic_url}}"></image>
+     <view style='margin:0 15rpx'>
+        <view class="font name">{{item.name}}</view>
+        <view class="bottomContainer">
+          <view class="priceLeft">
+            <view class="marketPrice">¥{{item.market_price}} <text style='font-size:18rpx;'>起</text></view>
+            <view class="vipPrice">¥{{item.retail_price}} <text style="font-size:20rpx;">起</text></view>
+          </view>
+          <image class="cart" src="		http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/115442478eb713.png"></image>
+        </view>
+     </view>
+  </view>
+      <view class="font caps">1</view>
+  </view>
+</view>
+
+
+<!--特惠专线区-->
+<!-- <view class="vipContainer" style='padding-bottom:14rpx;padding-top:40rpx'>
+    <view class='line'></view>
+    <view class='vipTitle'>特惠专线</view>
+    <view class="line"></view>
+</view> -->
+<view class="favorableContainer" wx:if="{{cheapLine.length>0}}">
+   <view class="itemBar">
+      <view  class="left">
+         <view class="redIcon"></view>
+         <text class="font targetTitle">热销路线</text>
+      </view>
+      <view class="moreContainer">
+        <navigator class="font moreText" url="/pages/category/category?id=1036013">查看更多</navigator>
+        <image class="iconBack" src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/105753965fd270.png"></image>
+      </view>
+   </view>
+   <view  class="favorMain" wx:for="{{cheapLine}}" wx:key="{{index}}" wx:for-item="item" data-id="{{item.id}}" bindtap='handlerClick' data-flag="0">
+      <view>
+        <image class='imgContainer' src="{{item.primary_pic_url}}"></image>
+      </view>
+      <view class='favorableText'>{{item.name}}</view>
+      <view class="favorableDesc">
+          <view class="favorablePrice">¥{{item.retail_price}}<text class="unit">起/人</text></view>
+          <view class='TagContent'>
+            <view class='tagDes unit'>成团保障</view>
+            <view class='favorableNum unit'>{{item.createNum}}<text class="unit" style='margin-left:0rpx;'>人出游</text></view>
+          </view>
+      </view>
+   </view>
+</view>
+
+
+<!--产品优选区-->
+<!-- <view class="vipContainer" style='padding-top:28rpx;padding-bottom:16rpx;' wx:if="{{cheapGoods.length>0}}">
+    <view class='line'></view>
+    <view class='vipTitle'>产品优选</view>
+    <view class="line"></view>
+</view> -->
+<view class='betterGoods'  wx:if="{{cheapGoods.length>0}}">
+  <view class="itemBar">
+      <view  class="left">
+         <view class="redIcon"></view>
+         <text class="font targetTitle">假日严选</text>
+      </view>
+      <view class="moreContainer">
+        <navigator class="font moreText" url="/pages/category/category?id= 1036015">查看更多</navigator>
+        <image class="iconBack" src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/105753965fd270.png"></image>
+      </view>
+   </view>
+  <view class='betterItem' wx:for="{{cheapGoods}}" wx:key="{{index}}"  wx:for-item="item"   data-id="{{item.id}}" data-flag="1" bindtap='handlerClick'>
+    <view>
+      <image class='betterImg' src="{{item.list_pic_url}}"></image>
+    </view>
+    <view class='bettterDesc'>{{item.name}}</view>
+    <view class='betterInfo'>
+      <view class="betterPrice">
+          <view class='price'>¥{{item.retail_price}}</view>
+          <text class='unit'>120人付款</text>
+      </view>
+      <view class='betterType {{ index % 2==0 ? "green" : "red"}}'>{{index %2 ==0 ? "推荐" : "特惠"}}</view>
+    </view>
+  </view>  
+</view>
+
+<!---底部动画-->
+<view class="vipContainer" style='margin-top:28rpx;padding-bottom:38rpx'>
+    <view class='line'></view>
+    <view class='vipTitle' style='font-size:24rpx;color:#B3B3B3'>我是有底线的</view>
+    <view class="line"></view>
+</view>
+</view>

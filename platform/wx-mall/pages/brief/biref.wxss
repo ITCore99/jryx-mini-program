@@ -1,0 +1,74 @@
+page{
+  background: #FAFAFA;
+}
+.container
+{
+  background: #fff;
+}
+.font{
+  font-family:  MicrosoftYaHei;
+  font-weight: Regular;
+  color:rgba(53, 53, 53, 1);
+}
+.title{
+  font-size: 32rpx;
+  padding-left:22rpx;
+  line-height: 1;
+  height: 103rpx;
+  box-sizing: border-box;
+  padding-top:49rpx;
+  border-bottom: 2rpx solid rgba(182, 182, 182, 1);
+}
+.birefItem .content
+{
+  padding:21rpx 23rpx 0rpx 24rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  
+}
+.pulleyInfo .content
+{
+  display: flex;
+  flex-wrap: wrap;
+  padding:21rpx 23rpx 0rpx 24rpx;
+}
+.item{
+  width:50%;
+  overflow: hidden;
+  height: 60rpx;
+  flex-shrink: 0;
+  line-height: 60rpx;
+}
+.innerContain
+{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.innerContain .icon{
+   width:40rpx;
+   height: 40rpx;
+   margin-right: 18rpx;
+}
+.innerContain .content2{
+  font-size: 28rpx;
+ 
+}
+.bottomLogo{
+  height:98rpx;
+  background: rgba(250, 250, 250, 1);
+  text-align: center;
+  line-height: 98rpx;
+}
+.bottomLogo .image
+{
+  width: 31rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.bottomLogo  .name{
+  color:rgba(153, 153, 153, 1);
+  font-size: 24rpx;
+  margin-left:17rpx;
+  margin-bottom:100rpx;
+}

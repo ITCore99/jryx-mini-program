@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="item">
+    <view class="title">类型</view>
+    <view class="detail">{{detail.category}}</view>
+  </view>
+  <view class="item">
+    <view class="title">金额</view>
+    <view class="sum">{{detail.money}}</view>
+  </view>
+  <view class="item">
+    <view class="title">支付状态</view>
+    <view class="detail">支付成功</view>
+  </view>
+  <view class="item">
+    <view class="title">支付方式</view>
+    <view class="detail">{{cardName}}</view>
+  </view>
+  <view class="item">
+    <view class="title">支付创建时间</view>
+    <view class="detail">{{detail.handlerTime}}</view>
+  </view>
+  <view class="title" style='margin-top:24rpx;' wx:if="{{false}}">订单详情</view>
+  <view class='desc' wx:if="{{false}}">
+      订单详情订单详情订单详情订单详情订单详情订单详情订
+单详情订单详情订单详情订单详情订单详情订单详情订单详
+情订单详情订单详情订单详情
+  </view>
+</view>

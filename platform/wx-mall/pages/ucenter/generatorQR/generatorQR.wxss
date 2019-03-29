@@ -1,0 +1,18 @@
+page{
+  background: #FAFAFA;
+}
+.container
+{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 650rpx;
+  height: 890rpx;
+  background: #fff;
+}
+.container .img
+{
+  width:650rpx;
+  height:890rpx;
+}

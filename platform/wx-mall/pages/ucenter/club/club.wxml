@@ -1,0 +1,37 @@
+<scroll-view scroll-y style="height:100%" scroll-into-view="{{index}}" scroll-with-animation="{{false}}">
+  <image class='topImg' src='http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181218/10341668221a41.png'></image>
+  <view class='topBg'>
+    <h1>假日优选</h1>
+    <text>假日优选是祥云凤凰集团旗下假日优选俱乐部专门为会员打造的一站式高端旅游服务品牌。</text>
+    <text>假日优选为您提供高品质的旅游出行服务。从机票预定、邮轮甄选、目的地交通到酒店下榻，从财富增值保值、艺术家私享会到百余家免税店会员折扣，从旅行咨询策划到目的地游览，假日优选让您从头到尾享受高质量假期。</text>
+    <text>无论您是家庭度假、退休旅游、朋友相聚、商务出行亦或是团队建设，假日优选为您量身打造前所未有的梦想体验，云集丰富多彩的旅行线路，融合全球殷勤好客的挚诚服务，缔造毕生难忘的璀璨之旅。</text>
+    <text>生活的下一站从来不会局限于一个目的地，假日优选和您一起踏上奇妙丰富的世界之旅，为您的梦想谱写全新篇章。</text>
+  </view>
+  <view class='center'>
+    <text class='title'>五大优选主题</text>
+    <image class='titleImg' src='http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181218/11191212422017.png'></image>
+    <view class='columnList'  wx:for="{{colum}}" wx:for-item="item" wx:key="{{index}}">
+      <text class='columnTitle' style='background-image: url({{item.indexImg}});'>{{item.title}}</text>
+      <image class='address' src='{{item.img}}'mode="widthFix"></image>
+      <text class='columnContent' decode="{{true}}">&emsp;&emsp;{{item.content}}</text>
+    </view>
+    
+  </view>
+  <view class='form'>
+    <form bindsubmit='formSubmit'>
+      <input class='input' placeholder='请输入您的姓名' name="name" value='{{form_info}}'></input>
+      <input class='input' placeholder='请输入您的手机' name="phone"  value='{{form_info}}'></input>
+      <button class='btn' form-type='submit'>立即咨询</button>
+    </form>
+  </view>
+  <view class='content'>
+    <text>预约热线：400-6708-018\n</text>
+      <text>公司座机：010-82041-331\n</text>
+      <text>客服电话：010-82046-031\n</text>
+      <text>1185516016@qq.com\n</text>
+      <text>北京市西城区黄寺大街21号世纪明珠广场5层501室</text>
+    <!-- <image src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/15170247273b8.png" class="phone"></image>
+    <text class="nation">西城区黄寺大街21号世纪明珠广场5层501室</text>-->
+    <image class='address' src='http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/1716388596a09b.png' mode="widthFix"></image> -
+  </view>
+</scroll-view>

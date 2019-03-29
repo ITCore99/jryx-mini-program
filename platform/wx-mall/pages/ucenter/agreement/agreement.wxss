@@ -1,0 +1,75 @@
+page
+{
+  background: #FAFAFA;
+}
+.container
+{
+  background-image: url("https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190121/112502136891dd.png");
+  background-size: 750rpx 491rpx;
+  background-repeat: no-repeat;
+  width:750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.agreement
+{
+  width:688rpx;
+  background: #fff;
+  box-shadow:0px 5rpx 21rpx 8rpx rgba(0, 0, 0, 0.06);
+  border-radius:30rpx;
+  margin:22rpx auto;
+  padding-top:34rpx;
+}
+.agreement .img
+{
+  display: block;
+  width:275rpx;
+  height: 32rpx;
+  margin:0rpx auto 26rpx;
+}
+.agreement .main
+{
+  width:650rpx;
+  height: 1513rpx;
+  margin:0 auto;
+}
+.main .item
+{
+  display: flex;
+  padding-bottom:40rpx;
+
+}
+.item .title
+{
+  width:8%;
+  height:100%;
+}
+.item .content
+{
+  flex:1;
+  margin-right:10rpx;
+}
+.font
+{
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(62,62,62,1);
+  line-height:45rpx;
+}
+.btn
+  {
+    width:420rpx;
+    height: 80rpx;
+    text-align: center;
+    margin: 0 auto;
+    margin-top:66rpx;
+    margin-bottom:88rpx;
+    line-height: 80rpx;
+    background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+    border-radius: 40rpx;
+    color: #FEFFFF;
+    font-family: MicrosoftYaHei;
+    font-size: 28rpx;
+    font-weight: Regular;
+    box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+  }

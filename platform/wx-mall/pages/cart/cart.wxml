@@ -1,0 +1,70 @@
+<view class="container">
+ <!--空购物车区--> 
+  <view class="no-cart" wx:if="{{cartGoods.length <= 0}}">
+    <view class="c">
+      <view class="title-box">
+        购物车空空如也～
+      </view>
+      <view class="to-index-btn" bindtap="toIndexPage">
+        去逛逛
+      </view>
+    </view>
+  </view>
+  <!--购物列表区--->
+  <view class="cartContainer" wx:else>
+    <view class='cartItem' wx:for="{{cartGoods}}" wx:key="{{item.id}}" wx:for-item="item">
+      <view class='radioIcon' catchtap='checkedItem'  data-item-index="{{index}}">
+          <image class='image' src="{{item.checked ? '/static/icon/shopcart/icon_xuanze1@2x.png':''}}" style="border:{{item.checked? 'none':'1px solid #616161'}}"></image>
+      </view>
+      <view>
+        <image src="{{item.list_pic_url}}" class='imgContainer'></image>
+      </view>
+      <view class='cartItemInfo'>
+        <view class='goodsInfo'>{{item.goods_name}}</view>
+       <view class="goodsType" wx:if="{{item.goods_specifition_name_value}}">
+          <view class="text">{{item.goods_specifition_name_value}}</view>
+          <view class="space"></view>
+        </view>
+        <view class='goodsPriceNumContainer'>
+          <view class='price'>¥{{vipFlage ? item.retail_price : item.market_price}}</view>
+          <view class='counter' wx:if="{{!isEditCart}}">
+            <view class='minus' catchtap='{{item.number==1 ? "":"cutNumber"}}' data-flage="0" data-index="{{index}}" data-item-index="{{index}}" style='opacity:{{item.number==1 ? .2 : 1 }}' >-</view> 
+            <view class='num'>{{item.number}}</view>
+            <view class='add' catchtap='addNumber' data-item-index="{{index}}" data-flage="1" data-index="{{index}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--底部tabBar结算区-->
+  <view  wx:if="{{cartGoods.length > 0}}">
+      <view class='totalPriceBar' wx:if="{{!isEditCart}}">
+      <view class='selectedAll' bindtap="checkedAll">
+          <image class='img'  src="{{ checkedAllStatus ? '/static/icon/shopcart/icon_xuanze1@2x.png':''}}" style="border:{{checkedAllStatus ? 'none':'1px solid #616161'}}"></image>
+          <text class='selectedAllText'>全选</text>
+      </view>
+      <view class='priceTotal'>
+          <text class='priceTotalText'>合计：</text>
+          <text class='priceTotalNum'>{{!isEditCart ? '￥'+cartTotal.checkedGoodsAmount : ''}}</text>
+      </view>
+      <view class='btnContainer'>
+        <view class='btnEdit btn' bindtap="editCart" >编辑</view>
+        <view class='btnPay btn gopay'style='color:#fff;border:none' bindtap="checkoutOrder">去结算</view>
+      </view>
+  </view>
+  <view class='totalPriceBar' wx:else>
+      <view class='selectedAll' bindtap="checkedAll">
+          <image class='img' src="{{ checkedAllStatus ? '/static/icon/shopcart/icon_xuanze1@2x.png':''}}"  style="border:{{checkedAllStatus ? 'none':'1px solid #616161'}}" ></image>
+          <text class='selectedAllText'>全选</text>
+      </view>
+      <view class='priceTotal'>
+          <text class='priceTotalText'></text>
+          <text class='priceTotalNum'></text>
+      </view>
+      <view class='btnContainer'style="margin-left:246rpx;">
+        <view class='btnEdit btn compete' bindtap="editCart" style='background-size:cover;background-reapt:no-reapt;color:#fff;border:none'>完成</view>
+        <view class='btnPay btn'  bindtap="deleteCart" style='color:#f00;border-color:#f00'>删除</view>
+      </view>
+  </view>
+  </view>
+</view>

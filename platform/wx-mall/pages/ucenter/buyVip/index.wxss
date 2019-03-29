@@ -1,0 +1,257 @@
+page{
+ background:rgba(250,250,250,1); 
+}
+.Container
+{
+  position: relative;
+}
+.Container .topContainer
+{
+  height: 491rpx;
+  overflow: hidden;
+  background: url("	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190121/112502136891dd.png");
+  background-size: 100%,100%;
+  background-repeat: no-repeat;
+}
+.topContainer .userInfoContainer
+{
+  margin-top:51rpx;
+  margin-left:34rpx;
+  display: flex;
+  align-items: center;
+}
+.userInfoContainer .avatar
+{
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  border:4rpx solid #fff;
+  box-shadow:0px 7rpx 13rpx 0px rgba(0, 0, 0, 0.41);
+}
+.userInfoContainer .rightContainer
+{
+  display: flex;
+  align-items: center;
+}
+.vipIcon
+{
+  width:126rpx;
+  height: 44rpx;
+  margin-left:10rpx;
+}
+.userInfoContainer .expriseTime
+{
+  font-size: 18rpx;
+  color:#ddd;
+  margin-left:12rpx;
+  margin-top:10rpx;
+}
+.font{
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+}
+.userInfoContainer .userName
+{
+  margin-left: 12rpx;
+  color:#fff;
+  font-size: 32rpx;
+  line-height: 30rpx;
+  font-weight: 600;
+}
+.userInfoContainer .vipDesc
+{
+  width: 115rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  color:rgba(243, 214, 144, 1);
+  border: 1px solid rgba(243,214,145,1);
+  border-radius:20px;
+  text-align: center;
+}
+.centerContainer
+{
+  width: 688rpx;
+  background: #fff;
+  position: absolute;
+  top:192rpx;
+  left:50%;
+  transform: translateX(-50%);
+  border-radius: 30rpx;
+  box-sizing: border-box;
+  padding:40rpx 57rpx 24rpx 52rpx;
+  box-shadow:0px 5px 21px 8px rgba(0, 0, 0, 0.06);
+}
+.privileged .imgContainer
+{
+  display: flex;
+  justify-content: center;
+}
+.privileged .privilegedText
+{
+  width: 300rpx;
+  height: 36rpx;
+ 
+}
+.row
+{
+  width: 100%;
+  margin-top:56rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.row .icon
+{
+  width:100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+}
+.row .price
+{
+  display: block;
+  font-size: 24rpx;
+  line-height:1;
+  margin-top: 14rpx;
+  color:rgba(53, 53, 53, 1);
+  text-align: center;
+}
+.btn
+{
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:106rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+} 
+.protocol
+{
+  margin-top: 25rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.protocol .payPro
+{
+  color:rgba(67, 104, 255, 1);
+  text-decoration: underline;
+}
+.protocol image
+{
+  width:183rpx;
+  height: 29rpx;
+}
+.bottomContainer
+{
+  position: absolute;
+  top:1242rpx;
+  left:50%;
+  transform: translateX(-50%);
+  width: 688rpx;
+  background: #fff;
+  border-radius:30rpx;
+  box-shadow:0px 5px 21px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom:63rpx;
+  box-sizing: border-box;
+  padding:32rpx 18rpx 61rpx 26rpx;
+}
+.bottomContainer .explain
+{
+  display: flex;
+  justify-content: center; 
+}
+.explain .ExImg
+{
+  width: 190rpx;
+  height: 32rpx;
+  margin-bottom: 32rpx;
+}
+.main .title
+{
+  font-size: 28rpx;
+  color:rgba(113, 60, 10, 1);
+  font-weight: 600;
+  line-height: 30rpx;
+}
+.main .content
+{
+  text-indent: 1rem;
+  font-size: 24rpx;
+  color:rgba(53, 53, 53, 1);
+  line-height: 44rpx;
+  padding-bottom: 38rpx;
+  margin-top: 20rpx;
+}
+.centerImgContainer 
+{
+  width:688rpx;
+  height: 242rpx;
+  background: #fff;
+  box-shadow:0px 5px 21px 8px rgba(0, 0, 0, 0.06);
+  border-radius:30rpx;
+  position: absolute;
+  top:978rpx;
+  left:50%;
+  transform: translateX(-50%);  
+  box-sizing: border-box;
+  padding: 26rpx 29rpx;
+}
+.centerImgContainer .img
+{
+  width: 100%;
+  border-radius: 20rpx;
+}
+.mask
+{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  background:rgba(0,0,0,0.5);  
+  z-index:996;
+}
+.gift
+{
+  width:521rpx;
+  height: 625rpx;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%); 
+  z-index:998;
+}
+.gift .img
+{
+  width: 521rpx;
+  height: 625rpx;
+  vertical-align: middle;
+}
+.gift .cancel
+{
+  width: 30rpx;
+  height: 29rpx;
+  position: absolute;
+  left:50%;
+  bottom:0;
+  transform: translateX(-50%);
+  z-index:1000;
+}
+.goLook
+{
+  width:278rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  position: absolute;
+  left:50%;
+  bottom:140rpx;
+  transform: translateX(-50%);
+  z-index:1000;
+}

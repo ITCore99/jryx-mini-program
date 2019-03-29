@@ -1,0 +1,4 @@
+<view class="container">
+  <image class="img" src="{{imageUrl}}" bindlongtap='eventSave'></image>
+  <canvasdrawer painting="{{config}}" class="canvasdrawer" bind:getImage="eventGetImage" ></canvasdrawer> 
+</view>

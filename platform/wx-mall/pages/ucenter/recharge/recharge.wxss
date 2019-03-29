@@ -1,0 +1,161 @@
+page
+{
+  background: rgba(250, 250, 250, 1);
+}
+.container
+{
+  box-sizing: border-box;
+  padding: 0 24rpx 0 28rpx;
+}
+.container .card
+{
+  width:700rpx;
+  height: 250rpx;
+  background: #409eff;
+  margin-top: 20rpx;
+  border-radius: 7pt;
+  position: relative;
+  box-shadow: -6rpx 5rpx 20rpx rgba(68, 64, 255, 0.7);
+  background-size: 100% 100%;
+  background-image: url("	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/1741408847c213.png");
+  z-index:998px;
+}
+.card .balanceTitle
+{
+  font-size: 22rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  color:#FFFEFE;
+  position: absolute;
+  top:42rpx;
+  left:58rpx;
+}
+.card .balanceNumber
+{
+  position: absolute;
+  top:84rpx;
+  left:58rpx;
+}
+.balanceNumber .integer
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 72rpx;
+  font-weight: Regular;
+}
+.balanceNumber .decimals
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+}
+
+.card .cardId
+{
+  position: absolute;
+  top:172rpx;
+  left:58rpx;
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+}
+.specialText
+{
+  color:#FFFFFF;
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 36rpx;
+  /* text-shadow: 5rpx 0rpx 5rpx #000; */
+}
+ .card .cardName
+ {
+   position: absolute;
+   top:110rpx;
+   right:52rpx;
+   font-family: MicrosoftYaHei;
+   font-weight: Regular;
+   color:#FFFEFE;
+   font-size: 22rpx;
+ }
+.family
+{
+  background-image: url("https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174427107b6cd3.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(112, 17, 230, 0.7) !important;  
+}
+.businness
+{
+  background-image:url("	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174538671577b0.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(25, 25, 25, 0.7)!important;  
+}
+.company
+{
+  background-image: url("https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181207/174626963eff0e.png") !important;
+box-shadow: -6rpx 5rpx 20rpx rgba(10, 10, 10,0.7) !important;  
+
+}
+.priceContainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:103rpx;
+}
+.font
+{
+ font-family:  MicrosoftYaHei;
+ font-weight: 400;
+ 
+
+}
+.priceContainer .text
+{
+  font-size: 24rpx;
+  line-height: 1;
+  color:rgba(53, 53, 53, 1);
+}
+.priceContainer .input
+{
+  width:150rpx;
+  min-height: 41rpx;
+  font-size: 51rpx;
+  font-weight: 700;
+  border: 1px solid transparent;
+  text-align: right;
+  margin-right: 27rpx;
+}
+.priceContainer .placeholder
+{
+  font-size: 24rpx;
+  text-align: left;
+}
+.totalMOney
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:50rpx;
+  font-size: 22rpx;
+}
+.totalMOney .money
+{
+  margin:0 15rpx 0 8rpx;
+  
+}
+.HandlerBtn
+  {
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:77rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+}

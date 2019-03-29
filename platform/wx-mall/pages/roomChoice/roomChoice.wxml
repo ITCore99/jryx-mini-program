@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="font title">舱房选择</view>
+ 
+  <view class="ItemContainer" wx:for="{{3}}">
+      <view class="outerItem">
+         <view class="picture"></view> 
+         <view class="homeType">
+            <view class="font homeName">内舱房</view>
+            <view class="font homeTypeNum">共5种房型可选</view>
+         </view>  
+         <view class="pricePer">
+              <text class="font unit"><text class="price">￥3399 </text>起/人</text>
+         </view> 
+         <view class="iconPart">
+            <text class="font iconText">收起</text>
+            <view class="iconImg"></view>
+         </view>
+      </view>
+      <view class="innerItemContainer">
+          <view class="innerItem" wx:for="{{3}}">
+            <view class="leftPart">
+                <view class="font roomName">(1U)船中虚拟阳台内舱房三人间</view>
+                <view class="font  roomArea">15-16m²可以住3人</view>
+                <view class="roomPrice">
+                  <text class="font desc"><text class="font pricce">¥3399/人</text> 非会员价¥3699</text>
+                </view>
+            </view>
+            <view class="rightPart">
+              <view class="counter">
+                <view class="reduce"></view>
+                <view class="font number">2</view>
+                <view class="add"></view>
+              </view>
+              <view class="font repertory">库存充足</view>
+            </view>    
+          </view>
+      </view>
+      <view class="line"></view>
+  </view>
+
+  <view class="commonItemContainer">
+    <view class="commonItem" wx:for="{{2}}">
+        <view class="infoPart">
+          <view class="font name">旅行保险</view>
+          <view class="font range">仅供一人使用</view>
+          <view class="font money">￥200</view>
+        </view>
+        <view class="counterPart">
+          <view class="counter">
+              <view class="reduce"></view>
+              <view class="font number">2</view>
+              <view class="add"></view>
+            </view>
+            <view class="font repertory">库存充足</view>
+        </view>
+    </view>
+  </view> 
+  <view class="tips">
+    <text class="font extend">如果需要机票的业务,请点击<text class="phone">拨打电话</text>或者拨打400-6708-08</text>
+  </view>
+  
+  <view class="bottomButton">
+    <view class="totalPrice">
+      <text class="font icon">￥</text>
+      <text class="font num">2244</text>
+    </view>
+    <view class="nextStep">
+      <view class="font text">明细</view>
+      <view class="button">下一步</view>
+    </view>
+  </view>
+</view>

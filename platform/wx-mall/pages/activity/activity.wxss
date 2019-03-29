@@ -1,0 +1,91 @@
+page
+{
+  background: #FAFAFA;
+  height: 0;
+  width: 0;
+}
+.favorableContainer
+{
+  display: block;
+  box-sizing: border-box;
+  padding-top:20rpx ;
+  padding-right: 34rpx;
+  padding-left: 34rpx;
+  padding-bottom: 32rpx;
+  background:#fff;
+}
+.favorableContainer .favorMain
+{
+  width:682rpx;
+  height:auto; 
+  background: #fff;
+  margin-top:18rpx;
+  box-shadow: 6rpx 5rpx 20rpx #ddd;
+  border-radius: 10rpx;
+  overflow: hidden;
+  
+}
+.favorableContainer .imgContainer
+{
+    width:682rpx;
+    height: 252rpx;
+
+}
+.favorMain .favorableText
+{
+  font-family: MicrosoftYaHei;
+  font-size: 24rpx;
+  color:#353535;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 18rpx;
+  margin-right: 14rpx;
+  line-height: 2;
+}
+.favorableDesc
+{
+  margin-left:18rpx;
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.favorableDesc .favorablePrice
+{
+  font-family: MicrosoftYaHei;
+  font-size: 34rpx;
+  color:#FF0000;
+
+}
+.unit
+{
+  font-family: MicrosoftYaHei;
+  font-size: 22rpx;
+  color:#A9A9A9;
+}
+.TagContent
+{
+  display: flex;
+  align-items: center;
+}
+.TagContent .tagDes
+{ 
+  padding: 6rpx 12rpx;
+  border: 1px solid #B1B1B1;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+.favorableNum
+{
+  margin-right: 20rpx;
+}
+::-webkit-scrollbar
+{
+  width: 0;
+  height: 0;
+  color:transparent;
+}

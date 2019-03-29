@@ -1,0 +1,14 @@
+ <view class="container">
+      <view class="favorableContainer">
+      <view  class="favorMain" wx:for="{{activityList}}" wx:key="{{index}}" wx:for-item="item" data-id="{{item.id}}" bindtap='handlerClick'>
+          <view>
+            <image class='imgContainer' src="{{item.primary_pic_url}}"></image>
+          </view>
+          <view class='favorableText'>{{item.name}}</view>
+          <view class="favorableDesc">
+              <view class="unit" style="color:#fff">2019年-10月-28日 9:00</view>
+              <view class="favorablePrice">¥{{item.retail_price}}<text class="unit">起/人</text></view>
+          </view>
+      </view>
+    </view>
+  </view>

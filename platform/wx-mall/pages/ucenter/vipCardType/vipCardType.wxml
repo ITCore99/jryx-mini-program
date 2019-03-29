@@ -1,0 +1,55 @@
+<scroll-view scroll-y style="height:100%" class='bgImg' scroll-into-view="{{index}}" scroll-with-animation="{{false}}"> 
+  <view class='topImg'>
+    <view class='cardTypeImg'>个人尊享卡</view>
+    <image class='cardImg' src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/155242263150f1.png'></image>
+    <view class='cardTxtBg'>
+      <text decode="{{true}}">&emsp;&emsp;激活即可消费使用。该卡仅限持卡人使用。可享受假日优选提供的签证服务、机票预订、邮轮船票、自驾游、专题旅游、酒店预订等量身定制的出行服务。\n</text>
+      <text decode="{{true}}">&emsp;&emsp;该卡面额值为人民币壹万元（￥10,000.00）。购卡时充值￥10,000.00元，即享受下述权益：\n</text>
+      <text>1）赠假日优选北京周边一日游（假日优选俱乐部指定线路，一人次）。
+2）赠假日优选【SELECT HOLIDAY】价值588元的旅行套装一套。（旅行杯、洗漱包、帽子、登山杖、遮阳伞等，以实际发放为准）
+3）赠送全年旅行出行保险服务（一人次）。</text>
+    </view>
+    <view class='cardTypeImg'>阖家欢乐卡</view>
+    <image class='cardImg' src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/15572776730196.png'></image>
+    <view class='cardTxtBg'>
+      <text decode="{{true}}">&emsp;&emsp;激活即可消费使用。一人激活，全家使用。可享受假日优选提供的签证服务、机票预订、邮轮船票、自驾游、专题旅游、酒店预订等量身定制的出行服务。\n</text>
+      <text decode="{{true}}">&emsp;&emsp;该卡面额值为人民币贰万元（￥20,000.00）。购卡时充值￥20,000.00元，即享受下述权益：\n</text>
+      <text>1）赠假日优选国内游（假日优选俱乐部指定线路，一人次）。
+2）赠假日优选【SELECT HOLIDAY】价值588元的旅行套装一套。（旅行杯、洗漱包、帽子、登山杖、遮阳伞等，以实际发放为准）
+3）赠送全年旅行出行保险服务。</text>
+    </view>
+    <view class='cardTypeImg'>商务贵宾卡</view>
+    <image class='cardImg' src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/1558076422e1c6.png'></image>
+    <view class='cardTxtBg'>
+      <text decode="{{true}}">&emsp;&emsp;激活即可消费使用，该卡仅限持有人公司使用。可享受假日优选提供的签证服务、机票预订、邮轮船票、自驾游、专题旅游、酒店预订等量身定制的出行服务。\n</text>
+      <text decode="{{true}}">&emsp;&emsp;该卡面额值为人民币伍万元（￥50,000.00）。购卡时充值￥50,000.00元，即享受下述权益：\n</text>
+      <text>1）赠假日优选出境游（假日优选俱乐部指定线路，一人次）。
+2）赠假日优选【SELECT HOLIDAY】价值888元的旅行套装一套。（旅行杯、洗漱包、帽子、登山杖、遮阳伞等，以实际发放为准）
+3）赠送全年旅行出行保险服务。</text>
+    </view>
+    <view class='cardTypeImg'>企业尊享卡</view>
+    <image class='cardImg' src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/155839863d6392.png'></image>
+    <view class='cardTxtBg'>
+      <text decode="{{true}}">&emsp;&emsp;激活即可消费使用，该卡仅限持有人公司使用。可享受假日优选提供的签证服务、机票预订、邮轮船票、自驾游、专题旅游、酒店预订等量身定制的出行服务。\n</text>
+      <text decode="{{true}}">&emsp;&emsp;该卡面额值为人民币壹拾万元（￥100,000.00）。购卡时充值￥100,000.00元，即享受下述权益：\n</text>
+      <text>1）赠假日优选邮轮游（一人次）。
+2）赠假日优选【SELECT HOLIDAY】价值1588元的旅行套装一套。（旅行杯、洗漱包、帽子、登山杖、遮阳伞等，以实际发放为准）
+3）赠送全年旅行出行保险服务。</text>
+    </view>
+    <view>
+      <form bindsubmit='submitForm'>
+        <input class='input' placeholder='请输入您的姓名' name="name" value="{{form_info}}"></input>
+        <input class='input' placeholder='请输入您的手机' name="phone" value="{{form_info}}"></input>
+        <button class='btn' form-type='submit'>立即预约开通</button>
+      </form>
+    </view>
+    <view class='content'>
+      <text>预约热线：400-6708-018\n</text>
+      <text>公司座机：010-82041-331\n</text>
+      <text>客服电话：010-82046-031\n</text>
+      <text>1185516016@qq.com\n</text>
+      <text>北京市西城区黄寺大街21号世纪明珠广场5层501室</text>
+      <image class='address' src='https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/1716388596a09b.png'></image>
+    </view>
+  </view>
+</scroll-view>

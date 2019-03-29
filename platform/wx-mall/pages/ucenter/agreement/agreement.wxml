@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="agreement">
+    <image src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190115/1126205050ab81.png" class="img"></image>
+    <view class="main">
+      <view class="item" wx:for="{{contents}}" wx:for-item="item" wx:key="{{index}}">
+        <view class="title font">{{index+1}}、</view>
+        <view class="content font">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="btn"  bindtap='getOrder'>{{vipInfo ? '立即续费' : '立即成为优享会员'}}</view>
+</view>

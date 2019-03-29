@@ -1,0 +1,11 @@
+<!-- <view class="container">
+  <view class="item" wx:for="{{4}}" wx:key="{{index}}">
+    <view class="font name">张三</view>
+    <view class="middle">
+      <view class='font phone '>18866888866</view>
+      <view class='font id marginID'>110213********3232</view>
+    </view>
+    <view class=" font right">编辑</view>
+  </view>
+  <view class="btn" bindtap='AddNewTraveller'>添加常用旅客</view>
+</view> -->

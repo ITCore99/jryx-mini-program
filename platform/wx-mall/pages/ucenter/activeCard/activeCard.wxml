@@ -1,0 +1,55 @@
+<view class="container">
+  <view wx:if="{{unactiveCardList.length>0}}" wx:for="{{unactiveCardList}}" wx:key="{{index}}" wx:for-item="item">
+      <view class='card' wx:if="{{item.type==1}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName">{{item.name}}</text>
+    </view>
+    <view class='card family' wx:if="{{item.type==2}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName">{{item.name}}</text>
+    </view>
+    <view class='card businness' wx:if="{{item.type==3}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName ">{{item.name}}</text>
+    </view>
+    <view class='card company'  wx:if="{{item.type==4}}" bindtap="activeCard" data-index="{{index}}">
+      <text class='balanceTitle'>余额</text>
+      <view class="balanceNumber">
+          <text class='integer'>{{item.handlerMoneny[0]}}.</text>
+          <text class="decimals">{{item.handlerMoneny[1] ? item.handlerMoneny[1]:"00"}}</text>
+      </view>
+      <text class="cardId" decode="{{true}}">{{item.handlerCarId[0]}}&nbsp;&nbsp;{{item.handlerCarId[1]}}&nbsp;&nbsp;{{item.handlerCarId[2]}}&nbsp;&nbsp;{{item.handlerCardSpecilId}}<text class='specialText'>{{item.handlerCardIdLastLetter}}</text></text>
+      <text class="cardName ">{{item.name}}</text>
+    </view>
+  </view>
+<!---转储时弹窗的样式层-->
+<view class="toast" wx:if="{{popupFlag}}">
+  <view class="main">
+    <text class='common'>将"{{willDumpCardInfo.name}}"</text>
+     <text class='common' decode="{{true}}">{{willDumpCardInfo.handlerCarId[0]}}&nbsp;&nbsp;{{willDumpCardInfo.handlerCarId[1]}}&nbsp;&nbsp;{{willDumpCardInfo.handlerCarId[2]}}&nbsp;&nbsp;{{willDumpCardInfo.handlerCarId[3]}}</text>
+     <text class='common'>转储到</text>
+     <text class='common'decode="{{true}}">{{dumpToCard.handlerCarId[0]}}&nbsp;&nbsp;{{dumpToCard.handlerCarId[1]}}&nbsp;&nbsp;{{dumpToCard.handlerCarId[2]}}&nbsp;&nbsp;{{dumpToCard.handlerCarId[3]}}</text>
+  </view>
+  <view class="btn">
+    <text class="common" bindtap='cancelDump'>取消</text>
+    <text class="common confirm " bindtap='confrimDump'>确定</text>
+  </view>  
+</view>
+<view class='mask' wx:if="{{popupFlag}}"></view>
+<view class="HandlerBtn" bindtap='AddNewCard'>手动添加</view>
+</view>

@@ -1,0 +1,140 @@
+.topBg {
+  height: 800rpx;
+  width: 100%;
+  margin-top: -250rpx;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181218/103818124462c1.png);
+}
+.topBg h1{
+  display:inline-block;
+  margin: 110rpx 0 46rpx 410rpx;
+  font-size:58rpx;
+  font-family:MicrosoftYaHei-Bold;
+  font-weight:bold;
+  color:rgba(53,53,83,1);
+  line-height:76rpx;
+}
+.topBg text{
+  font-size:26rpx;
+  display: block;
+  width:600rpx;
+  font-family:MicrosoftYaHei;
+  color: #353535;
+  text-align: justify;
+  margin:0 auto 16rpx auto;
+}
+.topImg {
+  width: 100%;
+}
+
+.form{
+  margin-top: 40rpx;
+}
+.input{
+  width:464rpx;
+  height:66rpx;
+  margin: 0 auto 20rpx auto; 
+  padding-left: 10rpx;
+  background:rgba(255,255,255,1);
+  border:1rpx solid rgba(18,139,255,1);
+  border-radius:6rpx;
+}
+.btn {
+  width: 500rpx;
+  height: 80rpx;
+  color: #FEFFFF;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  margin: 45rpx auto;
+  background: linear-gradient(-90deg, rgba(65, 102, 255, 1), rgba(103, 133, 255, 1));
+  border-radius: 40rpx;
+}
+.content,.center{
+  padding: 4%;
+}
+.title{
+  display: block;
+  font-size:32rpx;
+  font-family:MicrosoftYaHei-Bold;
+  font-weight:bold;
+  margin-top: 20rpx;
+  text-align: center;
+  color:rgba(53,53,83,1);
+  line-height:36rpx;
+}
+.titleImg{
+  display: block;
+  width: 337rpx;
+  height: 12rpx;
+  margin:20rpx auto 0 auto;
+}
+.content text{
+  display: block;
+  padding-left: 60rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  background-size: 40rpx;
+  margin-bottom: 20rpx;
+  background-repeat: no-repeat;
+  font-size: 24rpx;
+}
+.address{
+  width: 100%;
+  margin-top:28rpx;
+  border-radius:6rpx;
+}
+.content text:nth-child(1){
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/171241978eeae9.png)
+}
+.content text:nth-child(2){
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/171241978eeae9.png)
+}
+.content text:nth-child(3){
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/171241978eeae9.png)
+}
+.content text:nth-child(4){
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/171416422b4d6b.png)
+}
+.content text:nth-child(5){
+  background-image: url(http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/1716142826853e.png)
+}
+.columnTitle{
+  display:inline-block;
+  font-size:28rpx;
+  padding-left: 60rpx;
+  margin:40rpx 0 10rpx 260rpx;
+  background-size: 46rpx;
+  background-repeat: no-repeat;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(53,53,53,1);
+  line-height:46rpx;
+}
+.columnContent{
+  display: block;
+  margin-top: 15rpx;
+  font-size:24rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(53,53,53,1);
+  line-height:36rpx;
+}
+ .phone
+{
+  display: block;
+  width:416rpx;
+  height: 95rpx;
+  margin: 0 auto;
+
+} 
+.nation
+{
+  display: block;
+  margin: 24rpx auto 0;
+  font-family: MicrosoftYaHei;
+  text-align: center;
+  font-weight: 400;
+  color:rgba(53, 53, 53, 1);
+  font-size: 24rpx  !important;
+}

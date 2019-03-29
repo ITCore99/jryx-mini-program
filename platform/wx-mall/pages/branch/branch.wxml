@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="topBar">
+        <view class="font leftPart">请选择要进入的店：</view>
+        <view class="rightPart">
+           <view class="font default {{type==0 ? 'checked' : ''}}" bindtap='chageBar' data-type="0">默认</view>
+           <view class="line"></view>
+           <view class="font nearBranch  {{type==1 ? 'checked' : ''}}" bindtap='chageBar' data-type="1">我附近的店</view>
+        </view>
+    </view>
+    <view class="ListContainer"  wx:if="{{listData.length >0}}">
+      <view class="item" wx:for="{{listData}}" wx:key="{{index}}" wx:for-item="item" bindtap='clickItem' data-name="{{item.name}}" data-value="{{item.code}}">
+         <view class="infoPart">
+            <view class="topPart">
+              <view class="icon"></view>
+              <view class=" font title">{{item.name}}</view>
+            </view>
+            <view class="font bottomPart" wx:if="{{item.address}}">北京市 西城区黄寺大街21号世纪明珠广场</view>
+         </view>
+         <view class="distance">
+            <text class="font num" wx:if="{{item.distance}}">0.15km</text>
+            <view class="goIcon">
+             <view></view>
+            </view>
+         </view>
+      </view>
+    </view>
+    <view class="nomore" wx:if="{{noData}}">没有分店</view>
+</view>

@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="info">
+      <form bindsubmit='formSubmit'>
+         <view class="item"  wx:for="{{rows}}" wx:key="{{index}}" wx:for-item="item">
+            <view class=" font title">{{item.title}}</view>
+            <view class=" font tips">({{item.tips}})</view>
+            <input name="{{item.name}}" placeholder="{{item.placeholder}}" class="font input" placeholder-class='placeholder'></input>
+         </view>
+      </form>
+  </view>
+  <view class="setting">
+    <view class="item">
+      <text class="font delete">删除旅客</text>
+    </view>
+  </view>
+  <button bindtap='formSubmit' class="btn">保存</button> 
+</view>

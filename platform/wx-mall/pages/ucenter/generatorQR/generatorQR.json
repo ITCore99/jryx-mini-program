@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "canvasdrawer":"/component/canvasdrawer/canvasdrawer"
+  },
+  "navigationBarTitleText": "我的小程序码",
+  "enablePullDownRefresh": false
+}

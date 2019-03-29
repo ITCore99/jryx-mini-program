@@ -1,0 +1,60 @@
+<scroll-view scroll-y style="height:100%" scroll-into-view="{{index}}" scroll-with-animation="{{false}}" id="person"  bindscroll="bindscroll" >
+    <view class='container' >
+        <!--顶部标题-->
+        <!-- <view class="vipContainer">
+            <view class='line'></view>
+            <view class='vipTitle'>尊享会员</view>
+            <view class="line"></view>
+        </view> -->
+        <!--下方主体内容-->
+        <view class="main">
+          <view class='personVip' >
+            <view class='headerWrap'>
+                <view class=" icon {{hightLight=='0' ? 'iconActive' :''}}"></view>
+                <view class="title {{hightLight=='0' ? 'active' :''}}">行程私密 专属线路</view>
+            </view>
+            <view class="vipDesc">
+                <text class="content  {{hightLight=='0' ? 'active' :''}}">专业团队根据您的旅行目的、旅行预算、同行人员，进行主题策划，提供有深度、独一无二的旅行方案。</text>
+                <image src="	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181211/1108039591d07d.png"  class='img'></image>
+            </view>
+          </view>
+
+          <view class='familyVip' id="family">
+            <view class='headerWrap'>
+                <view class=" icon {{hightLight=='1' ? 'iconActive' :''}}"></view>
+                <view class="title {{hightLight=='1' ? 'active' :''}}">一价全包 价格透明</view>
+            </view>
+            <view class="vipDesc">
+                <text  class="content  {{hightLight=='1' ? 'active' :''}}">化繁为简，旅行需要的签证、机票、酒店、用车、导游、WIFI、餐厅、演出、保险等全部一站定好。我们采取分项报价，可任意甄选最喜爱、性价比最好的旅行体验，所有价格保证不高于市场价。</text>
+                <image src="			http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181211/1151155425818c.png"  class='img'></image>
+            </view>
+          </view>
+
+          <view class='bussinesVip' id="business">
+            <view class='headerWrap'>
+                <view class=" icon {{hightLight=='2' ? 'iconActive' :''}}"></view>
+                <view class="title {{hightLight=='2' ? 'active' :''}}">商旅管家 贴心服务</view>
+            </view>
+            <view class="vipDesc">
+                <text  class="content  {{hightLight=='2' ? 'active' :''}}">出团前开微信准备会议；安排国内接送服务；制定事无巨细的出行手册；旅行结束后制做旅行纪念光盘；您需要做的就是收拾好行李准备出发。配备专属商旅管家，手机7-24小时畅通，及时处理行程，调整突发事件，随呼随应，旅行更安心。</text>
+                <image src="				http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181211/11562159666862.png"  class='img'></image>
+            </view>
+          </view>
+
+          <view class='companyVip' id="company">
+            <view class='headerWrap'>
+                <view class=" icon {{hightLight=='3' ? 'iconActive' :''}}"></view>
+                <view class="title {{hightLight=='3' ? 'active' :''}}">顶级资源 品质保障</view>
+            </view>
+            <view class="vipDesc">
+                <text  class="content  {{hightLight=='3' ? 'active' :''}}">甄选目的地，优质的定制师注重您的深度体验，优中选优的专属境外中文车导，带您领略当地风情。邮轮产品全覆盖，航线遍布全球。</text>
+                <image src="					http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181211/1159275569de88.png"  class='img'></image>
+            </view>
+          </view>
+        </view>
+        <!--底部商标栏-->
+        <view class="logo">
+          <image class="logoImg" src="	http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181211/12042441510dcb.png"></image>
+        </view>
+    </view>
+</scroll-view>

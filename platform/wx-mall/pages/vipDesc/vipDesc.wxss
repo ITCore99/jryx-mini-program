@@ -1,0 +1,101 @@
+page
+{
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 250, 250, 1);
+}
+.vipContainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 996;
+  margin-top: 30rpx;
+}
+.vipContainer .line
+{
+  width: 62rpx;
+  height: 4rpx;
+  background:#B2B2B2;
+}
+.vipContainer .vipTitle
+{
+  font-family: MicrosoftYaHei;
+  font-size: 32rpx;
+  color:#353535;
+  margin: 0 34rpx;
+}
+.icon
+{
+  width:16rpx;
+  height:36rpx;
+  will-change:background;
+  transition: background ease 0.2s;
+}
+.iconActive{
+   background:#D5AE61 !important;
+}
+.active
+{
+  color:#DB9D1E !important;
+}
+.headerWrap
+{
+  display: flex;
+  margin-top:32rpx;
+  align-items: center;
+}
+.title
+{
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 30rpx;
+  text-align: left;
+  margin-left:20rpx;
+  will-change:color;
+  transition: color ease 0.2s;
+}
+.vipDesc
+{
+  margin: 28rpx 36rpx 0 38rpx;
+}
+.content
+{
+  font-family: MicrosoftYaHei;
+  font-size: 24rpx;
+  font-weight: Regular;
+  color:#353535;
+  line-height: 42rpx;
+  margin-right:6rpx;
+  will-change:color;
+  transition: color ease 0.2s;
+}
+.img
+{
+  width:674rpx;
+  height: 310rpx;
+  margin:30rpx 0 56rpx 0;
+  
+}
+.logo
+{
+  background: #252525;
+  width:750rpx;
+  height: 108rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.logo .logoImg
+{
+  width: 184rpx;
+  height: 46rpx;
+}
+::-webkit-scrollbar
+{
+  width: 0;
+  height:0;
+  color:transparent;
+}

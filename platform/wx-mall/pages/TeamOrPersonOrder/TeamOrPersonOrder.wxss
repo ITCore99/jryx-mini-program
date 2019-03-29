@@ -1,0 +1,253 @@
+page
+{
+  background:rgba(250,250,250,1);
+}
+.container .topImg
+{
+  width: 750rpx;
+  height:454rpx;
+  position: fixed;
+  top:0;
+  left:0;
+}
+.container .main
+{
+  width: 648rpx;
+  height:937rpx;
+  background: #FFF;
+  margin: 0 auto;
+  position: fixed;
+  top:187rpx;
+  left:55rpx;
+  z-index:900;
+  border-radius:  0rpx  0rpx  10rpx  10rpx;
+  /* box-shadow:0px 4px 46px 0px rgba(0, 0, 0, 0.11); */
+}
+.container .bottomImg 
+{
+  width: 750rpx;
+  height: 153rpx;
+  position: fixed;
+  bottom: 0;
+  left:0;
+}
+.container .topBar
+{
+  display: flex;
+  width: 648rpx;
+  height: 80rpx;
+  position: fixed;
+  top:107rpx;
+  left:54rpx;
+  z-index:900;
+  background: rgba(0, 0, 0, 0.55);
+}
+.font
+{
+  font-family: MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(53, 53, 53, 1);
+  font-size: 24rpx;
+}
+.topBar .item
+{
+   width:50%;
+   height:80rpx;
+   text-align: center;
+   line-height: 80rpx;
+   font-size: 28rpx;
+   color:#fff;
+   background: transparent;
+   border-radius: 10rpx  10rpx  0px  0px;
+}
+.topBar .active 
+{
+  color:rgba(53, 53, 53, 1);
+  height:88rpx;
+  line-height: 88rpx;
+  background-image:url("	http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181228/1016308114c8bd.png") ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;   
+  position: absolute;
+  top:-8rpx;
+  left:0;
+}
+.topBar .TeamActive
+{
+  position: absolute;
+  top:-8rpx;
+  right:0;
+  height:88rpx;
+  transform: rotateY(180deg);
+  background-image:url("	http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181228/1016308114c8bd.png") ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;   
+}
+.roate
+{
+  display: inline-block;
+  font-size: 28rpx;
+  color:rgba(53, 53, 53, 1);
+  line-height: 88rpx;
+  transform: rotateY(-180deg) !important;
+}
+.main .mainContainer
+{
+  width:648rpx;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top:51rpx;
+  padding-left:54rpx;
+  padding-right: 63rpx;
+}
+.mainContainer .destination
+{
+  display: flex;
+  height: 52rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.destination .icon
+{
+  width: 44rpx;
+  height: 8rpx;
+}
+.commom
+{
+  width: 200rpx;
+  height: 52rpx;
+  line-height:52rpx;
+  color:rgba(53, 53, 53, 1);
+  font-size:24rpx;
+}
+.destination .from
+{
+  text-align: left;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 1);
+}
+.destination .to
+{
+  text-align: right;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 1);
+}
+.row
+{
+  width: 100%;
+  height: 78rpx;
+  line-height: 78rpx;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 1);
+}
+.date
+{
+  display: flex;
+}
+.type
+{
+  display: flex;
+}
+.type .input
+{
+  width:50rpx;
+  height: 80rpx;
+  padding-left:5rpx;
+}
+.typeComomn
+{
+  display: flex;
+  margin-right:12rpx;
+}
+.budget
+{
+  display: flex;
+}
+.budget .input
+{
+  width:100rpx;
+  height: 80rpx;
+  margin-left: 10rpx;
+}
+.numPickerT
+{
+  margin-left:20rpx;
+}
+
+.textarea
+{
+  width:100%;
+  height: 124rpx;
+  border:2rpx  solid rgba(220, 220, 220, 1);
+  box-shadow: inset 0rpx 4rpx 13rpx 0rpx rgba(0, 0, 0, 0.04);
+  padding-left:12rpx;
+}
+.placeholder
+{
+  color:rgba(178, 178, 178, 1);
+}
+.dashed{
+  width: 530rpx;
+  height: 6rpx;
+  border-bottom: 1rpx  dashed rgba(178, 178, 178, 1);
+  margin:0 auto;
+  margin-top: 49rpx;
+
+}
+.linkMan
+{
+  display: flex;
+  align-items: center;
+}
+.linkMan .name
+{
+  font-size: 28rpx;
+}
+.linkMan .input
+{
+  height: 100%;
+  flex: 1;
+  padding-left:27rpx;
+}
+.linkMan .linkmanholder
+{
+  color:rgba(178, 178, 178, 1)
+}
+.btn
+{
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:55rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(242, 110, 58, 1),rgba(230, 17, 54, 1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(242, 110, 58, 0.52);
+}
+.Circle
+{
+ 
+  background:#FAFAFA;
+  position: absolute;
+}
+.left
+{
+  width: 19rpx;
+  height: 38rpx;
+  top:577rpx;
+  left:0rpx;
+  z-index:1000;
+  border-radius:0 19rpx 19rpx 0; /* 左上、右上、右下、左下 */
+}
+.right
+{
+  width: 19rpx;
+  height: 38rpx;
+  top:577rpx;
+  right:0rpx;
+  z-index: 1000;
+  border-radius:19rpx 0 0 19rpx; /* 左上、右上、右下、左下 */
+}
+

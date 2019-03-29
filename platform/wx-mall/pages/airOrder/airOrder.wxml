@@ -1,0 +1,83 @@
+<view class="container">
+    <image src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181226/1412094300c19.png" class="img"></image>
+    <form bindsubmit='bindsubmit'>
+            <view class="top">
+        <view class="fromPart">
+          <view class="font title">from</view>
+          <input class="font input" placeholder='出发地' placeholder-class='font placerholder' name="startPlace" bindinput='getFromPlace' data-index="0" value="{{fromPlace}}"></input>
+          <view class="iconPart">
+            <image class="icon" src="	http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181226/1440245780f909.png"></image>
+            <text  class="font Desc">出发地</text>
+          </view>
+        </view>
+        <view class="linepart">
+          <view class='line left'></view>
+          <view class='line middle'></view>
+          <view class='line end'></view>
+        </view>
+
+        <view class="toPart">
+          <view class="font title">to</view>
+          <input class="font input" placeholder='目的地' placeholder-class='font placerholder ' name="endPlace" bindinput='getFromPlace' data-index="1" value='{{toPlace}}'></input> 
+          <view class="iconPart">
+            <image class="icon" src="	http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181226/145648816429ad.png"></image>
+            <text  class="font Desc">目的地</text>
+        </view>
+        </view>
+        <view class="radioPart">
+          <view class='radio' bindtap='radioHandClick' data-index="{{index}}" wx:for="{{radios}}" wx:key="{{index}}" wx:for-item="item">
+              <image src="{{item.checked ? item.checkedUrl : item.imgUrl}}" class="img" class="icon"></image>
+              <text class="title">{{item.title}}</text>
+          </view>
+        </view> 
+        <view class="exchangeICon" bindtap='handlerExchage'></view> 
+      </view>
+      <view class="infoPart">
+        <view class="info">
+            <view class="itemTop">
+                <view class="item ">
+                  <view class="font title">出发时间</view>
+                  <view>
+                    <picker mode="date" value="{{startTimeF}}" start="{{startTimeF}}" end="2019-7-10" name="startTimeF" bindchange='startTimeChange'>
+                    <view class="font_28">{{startTimeF}}</view>
+                    </picker>
+                  </view>
+                </view>
+                <view class="item ">
+                  <view class="font title">返程时间（选填)</view>
+                  <view>
+                    <picker mode="date" value="{{endTime}}" start="{{startTimeF}}"  end="2019-7-10" name="endTime" bindchange='endTimeChange'>
+                      <view class="font_28">{{endTime}}</view>
+                    </picker>
+                  </view> 
+                </view>
+            </view>
+            <view class="itemMiddle">
+              <view class="font title topPart">乘坐人数</view>
+              <view class="bottomPart" >
+                <view class="item" wx:for="{{counters}}" wx:key="{{index}}" wx:for-item="item">
+                  <view class="font title">{{item.title}}</view>
+                  <view class="count">
+                    <view class="font commom reduce {{item.num==0 ? 'opacity' : '' }}" bindtap='{{item.num==0 ? "" : "counterClick"}}' data-index="0" data-target="{{index}}">-</view>
+                    <view class="font commom num" >{{item.num}}</view>
+                    <view class="font commom add" bindtap='counterClick' data-index="1"  data-target="{{index}}">+</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="Itembottom">
+              <view class="item">
+                  <view class="font title ">联系人</view>
+                  <input class="font input m_top" placeholder='张三' placeholder-class='input placeholder' name="name"></input>
+              </view>
+              <view class="item">
+                  <view class="font title">手机号</view>
+                  <input class="font input m_top" placeholder='请输入手机号' placeholder-class='input placeholder' type='number' name="phone"></input>
+              </view> 
+            </view>  
+        </view>
+      </view>
+      <button class='btn' form-type='submit'>立即预定</button>
+    </form>
+
+</view>

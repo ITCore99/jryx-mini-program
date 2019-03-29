@@ -1,0 +1,62 @@
+<view class="container">
+   <view class="birefItem">
+      <view class="font title">邮轮简介</view>
+      <view class="font content">
+        {{cruiseEntityList[0].cruiseDesc}}
+      </view>
+   </view>
+   <view class="pulleyInfo">
+    <view class="font title">游轮小档案</view>
+    <view class="content">
+      <view class="item"> 邮轮名称：{{cruiseEntityList[0].cruiseName}}</view>
+      <view class="item"> 层数：{{cruiseEntityList[0].floor}}</view>
+      <view class="item"> 载客量：{{cruiseEntityList[0].guests}}</view>
+      <view class="item"> 重量：{{cruiseEntityList[0].weight}}</view>
+      <view class="item">首航时间：{{cruiseEntityList[0].firstFlight}}</view>
+      <view class="item">邮轮公司：{{cruiseEntityList[0].cruiseCompany}}</view>
+    </view>
+   </view>
+
+   <view class="pulleyInfo">
+    <view class="font title">舱房设施</view>
+    <view class="content">
+      <view class="item" wx:for="{{shipSpe.equimentArr}}" wx:for-item="item" wx:key="index">
+        <view class="innerContain">
+          <image class="icon" src="{{item.url}}"></image>
+          <view class="font content2">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+
+    <view class="pulleyInfo">
+    <view class="font title">游轮美食</view>
+    <view class="content">
+      <view class="item" wx:for="{{shipSpe.cateArr}}" wx:for-item="item" wx:key="index">
+        <view class="innerContain">
+          <image class="icon" src="{{item.url}}"></image>
+          <view class="font content2">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+
+    <view class="pulleyInfo" style='padding-bottom:30rpx;'>
+    <view class="font title">娱乐活动</view>
+    <view class="content">
+      <view class="item" wx:for="{{shipSpe.entertainment}}" wx:for-item="item" wx:key="index">
+        <view class="innerContain">
+          <image class="icon" src="{{item.url}}"></image>
+          <view class="font content2">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+   </view>
+
+   <!-- 底部的logo-->
+    <view class="bottomLogo">
+      <image class="image" src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190128/091803561c918d.png"></image>
+      <text class="font name">假日优选 带您领略精彩世界</text>
+    </view>
+
+</view>

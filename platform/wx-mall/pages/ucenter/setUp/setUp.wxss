@@ -1,0 +1,51 @@
+page
+{
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 250, 250, 1);
+}
+.container
+{
+  background: rgba(255, 255, 255, 1);
+  padding: 0 30rpx 0 32rpx;
+}
+.container .item
+{
+  height: 109rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(198, 198, 198, .3)
+}
+ .font
+{
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+} 
+.item .title
+{
+  font-size: 28rpx;
+  color:rgba(53, 53, 53, 1);
+
+}
+.item .backPart
+{
+  display: flex;
+  align-items: center;
+}
+.backPart .tips
+{
+  font-size: 24rpx;
+  color:rgba(136, 136, 136, 1);
+  margin-right: 18rpx;
+}
+.backPart .back
+{
+   width: 20rpx;
+   height: 34rpx;
+   vertical-align: middle;
+}
+.container .item:last-child
+{
+  border: none;
+}

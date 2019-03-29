@@ -1,0 +1,56 @@
+<view class="Container">
+  <view class="topContainer">
+    <view class="userInfoContainer">
+      <image class="avatar"src="{{ userInfo.avatarUrl }}"></image>
+      <view>
+        <view class="rightContainer">
+           <view class=" font userName">{{userInfo.nickName }}</view>
+          <image class="vipIcon" src="{{vipInfo.status==vipState ?  'http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190115/1015389404a34a.png' :  'http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190115/1048416761ef26.png'}}" wx:if="{{vipInfo}}"></image>
+        </view>
+        <view class="font expriseTime" wx:if="{{vipInfo}}">{{vipInfo.status ? '' : vipInfo.effectDate}} 会员到期</view>
+      </view>
+    </view>
+  </view>
+  <view class="centerContainer">
+    <view class="privileged">
+    <view class="imgContainer">
+         <image class= " privilegedText" src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/1152376012dbf9.png"></image>
+      </view>
+      <view class="row">
+        <view class="item" wx:for="{{privilegesOne}}" wx:key="{{index}}" wx:for-item="item">
+          <image  class="icon" src="{{item.imgUrl}}"></image>
+          <text  class="price">{{item.title}}</text>
+        </view>
+      </view>
+      <view class="row" style="margin-top:82rpx">
+        <view class="item" wx:for="{{privilegesTwo}}" wx:key="{{index}}" wx:for-item="item">
+          <image  class="icon" src="{{item.imgUrl}}"></image>
+          <text  class="price" >{{item.title}}</text>
+        </view>
+      </view>
+      <view class="btn" bindtap='getOrder'>{{vipInfo ? '立即续费' : '立即成为优享会员'}}</view>
+      <view class="font protocol">
+        <!-- 点击成为优享会员即表示同意<text class="payPro">购买协议</text> -->
+        <image  class="image" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/174446677940ad.png" bindtap='lookAgreement'></image>
+      </view>
+    </view>  
+  </view>
+  <navigator  url="/pages/ucenter/vipCardType/vipCardType"   class="centerImgContainer">
+    <image  class="img" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/161627925dd46c.png" mode='widthFix'></image>
+  </navigator>
+  <view class="bottomContainer">
+     <view class="explain">
+      <image   class="ExImg" src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/1200383160870d.png"></image>
+    </view>
+    <view class="main" wx:for="{{vipExplains}}" wx:for-item="item" wx:key="{{index}}">
+      <view class="font title">{{item.title}}</view>
+      <view class="font content">{{item.content}}</view>
+    </view>
+  </view>
+  <view class="mask" wx:if="{{false}}" bindtap='cancelMask'></view>
+  <view class="gift" wx:if="{{false}}">
+    <image  class="img" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/1710017396a761.png"></image>
+    <view class="cancel" bindtap='getOrder'></view>
+    <view class="goLook" bindtap='GoVIP'></view>
+  </view>
+</view>

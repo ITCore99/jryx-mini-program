@@ -1,0 +1,128 @@
+page
+{
+  background: rgba(250, 250, 250, 1);
+}
+.container
+{
+  padding: 0 30rpx;
+ 
+}
+.item
+{
+   width:690rpx;
+   height: 168rpx;
+   display: flex;
+   align-items: center;
+   background: #fff;
+   border-radius: 8rpx;
+   border: 1px solid rgba(242, 242, 242, 1);
+   box-shadow:0px 6rpx 9px 0px rgba(0, 0, 0, 0.1);
+   margin-top: 35rpx;
+}
+.item .left
+{
+  margin-left: 17rpx;
+}
+.font{
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  line-height: 1;
+}
+.left .username
+{
+  font-size: 28rpx;
+  color:rgba(53,53,53,1);
+  width:100rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  
+}
+.left .default
+{
+  font-size: 22rpx;
+  line-height: 36rpx;
+  width: 66rpx;
+  color:rgba(53, 53, 53, 1);
+  background: rgba(255, 0, 0, .2);
+  padding:2rpx 11rpx;
+  margin-top:29rpx;
+}
+.middle
+{
+  margin-left:10rpx;
+
+}
+.middle .phone
+{
+  font-size:24rpx;
+  color:rgba(53, 53, 53, 1);
+}
+.middle .address
+{
+  width: 388rpx;
+  font-size: 24rpx;
+  color:rgba(178, 178, 178, 1);
+  margin-top: 18rpx;
+}
+.right
+{
+  margin-left: 56rpx;
+  height: 40rpx;
+  border-left:2rpx solid rgba(204, 204, 204, 1);
+}
+.edit
+{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color:rgba(178, 178, 178, 1);
+}
+.empty-view{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top:30rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-view .icon{
+  height: 248rpx;
+  width: 258rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty-view .text{
+  width: auto;
+  font-size: 28rpx;
+  line-height: 35rpx;
+  color: #999;
+} 
+.btn
+{
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:100rpx;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+}
+.fontShrink
+{
+  font-size:22rpx !important;
+  line-height: 1.2 !important;
+}
+.defaultShrinkMaginT
+{
+  margin-top:16rpx !important;
+}

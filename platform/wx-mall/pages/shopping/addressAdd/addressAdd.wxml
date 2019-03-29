@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="info">
+      <form bindsubmit='formSubmit'>
+         <view class="item">
+            <view class=" font title">姓名：</view>
+            <input name="username" placeholder="请输入姓名" class="font input" placeholder-class='placeholder'bindinput="bindinputName"  value="{{address.userName}}"></input>
+         </view>
+         <view class="item">
+            <view class=" font title">手机：</view>
+            <input name="telNumber" placeholder="请输入手机号" class="font input" placeholder-class='placeholder' type='number' maxlength='11' value="{{address.telNumber}}"  bindinput="bindinputMobile"></input>
+         </view>
+         <view class="item">
+            <view class="font regionTitle">选择地区</view>
+            <picker mode="region" name="region  " bindchange="bindRegionChange" value="{{region}}" custom-item="{{  }}">
+              <view class="font picker">
+                {{region[0]}}-{{region[1]}}-{{region[2]}}
+              </view>
+            </picker>
+          <!-- <view class="back"></view> -->
+         </view>
+         <view class="item" style="height:126rpx;border:none;">
+           <textarea placeholder='详细地址（如街道、小区)' bindinput="bindinputAddress" style='height:126rpx;width:100%' placeholder-class='placeholderTextarea' class='textarea' name="address" value="{{address.detailInfo}}"></textarea>
+         </view>
+      </form>
+  </view>
+  <view class="setting">
+    <view class="item">
+      <text class="font default">设为默认地址</text>
+      <switch checked="{{address.is_default==1 ? true : false }}" bindchange="switchChange" class="switch" type="switch" />
+    </view>
+    <view class="item"style="border:none;">
+      <text class="font delete">删除地址</text>
+    </view>
+  </view>
+  <view class="btn" bindtap='saveAddress'>保存</view> 
+</view>
+
+
+
+
+<!-- <view class="add-address">
+    <view class="add-form">
+        <view class="form-item">
+            <input class="input" bindinput="bindinputName" placeholder="姓名" value="{{address.userName}}" auto-focus/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputMobile" value="{{address.telNumber}}" maxlength="15" type="number" placeholder="手机号码"/>
+        </view>
+        <view class="form-item">
+            <input class="input" value="{{address.full_region}}" disabled="true" bindtap="chooseRegion" placeholder="省份、城市、区县"/>
+        </view>
+        <view class="form-item">
+            <input class="input" bindinput="bindinputAddress" value="{{address.detailInfo}}" placeholder="详细地址, 如街道、楼盘号等"/>
+        </view>
+        <view class="form-default">
+            <text bindtap="bindIsDefault" class="default-input {{address.is_default == 1 ? 'selected' : ''}}">设为默认地址</text>
+        </view>
+    </view>
+
+    <view class="btns">
+        <button class="cannel" bindtap="cancelAddress">取消</button>
+        <button class="save" bindtap="saveAddress">保存</button>
+    </view>
+    
+    <!---地址选项区-->
+    <!-- <view class="region-select" wx:if="{{openSelectRegion}}">
+      <view class="hd">
+        <view class="region-selected">
+          <view class="item {{item.id == 0 ? 'disabled' : ''}} {{(regionType -1) === index ? 'selected' : ''}}" bindtap="selectRegionType" data-region-type-index="{{index}}" wx:for="{{selectRegionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </view>
+        <view class="done {{selectRegionDone ? '' : 'disabled'}}" bindtap="doneSelectRegion">确定</view>
+      </view>
+      <view class="bd">
+        <scroll-view scroll-y="true" class="region-list">
+          <view class="item {{item.selected ? 'selected' : ''}}" bindtap="selectRegion" data-region-index="{{index}}" wx:for="{{regionList}}" wx:key="{{item.id}}">{{item.name}}</view>
+        </scroll-view>
+      </view>
+    </view>
+</view> -->
+<!-- <view class="bg-mask" bindtap="cancelSelectRegion" wx:if="{{openSelectRegion}}"></view>  -->

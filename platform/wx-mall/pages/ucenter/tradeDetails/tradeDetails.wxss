@@ -1,0 +1,57 @@
+page
+{
+  width:100%;
+  height: 100%;
+  background: #FAFAFA
+}
+.container
+{
+  background: #FFF;
+  box-sizing: border-box;
+  padding: 0 30rpx 0 32rpx;
+}
+.container .item
+{
+  width:690rpx;
+  height:108rpx;
+  border-bottom:1px solid rgba(198, 198, 198, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title
+{
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 28rpx;
+  color:#5D5D5D;
+  text-align: left;
+}
+.item .detail
+{
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  font-size: 22rpx;
+  color:#353535;
+  text-align: left;
+}
+.sum
+{
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  color:#FF0000;
+  font-size: 28rpx;
+  text-align: left;
+}
+.desc
+{
+  padding-left:30rpx;
+  padding-right:30rpx;
+  margin-top: 22rpx;
+  font-family: MicrosoftYaHei;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  font-weight: Regular;
+  color:#5D5D5D;
+  text-align: left;
+}

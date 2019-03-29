@@ -1,0 +1,90 @@
+<view class="container">
+  <view class="tabBar">
+    <view class="font commomBar {{index==0 ? 'active' : ''}}"  data-index="0">全部订单</view>
+    <view class="font commomBar {{index==1 ? 'active' : ''}}"  data-index="1"></view>
+    <view class="font commomBar {{index==2 ? 'active' : ''}}"  data-index="2"></view>
+    <view class="font commomBar {{index==3 ? 'active' : ''}}"  data-index="3"></view>
+    <view class="font commomBar {{index==4 ? 'active' : ''}}"  data-index="4"></view> 
+    <view class="TarbarIcon" style='left:{{left}}rpx'></view> 
+  </view>
+  <view style="margin-top:90rpx;">
+      <navigator  class="main" url="../orderDetail/orderDetail?id={{item.id}}" wx:for="{{orderList}}" wx:key="{{item.id}}" wx:for-item="item">
+      <view class="item"  wx:for="{{item.goodsList}}" wx:key="{{gitem.id}}" wx:for-item="gitem" wx:if="{{item.goodsList}}">
+        <image class="img" src="{{gitem.list_pic_url}}"></image>
+        <view class="right">
+          <view class="font topName">{{gitem.goods_name}}</view>
+          <view class="attribute">
+            <view class="font text">共{{gitem.number}}件商品</view>
+            <view class="space"></view>
+          </view>
+          <view>
+             <view  wx:if="{{item.order_status==201}}" class="topPartBottom">
+               <view class="font refund">
+                  <image class="icon"></image>
+                   {{item.order_status_text}}
+              </view>
+              <view class="font desBtn" style="margin-right:21rpx;">查看详情</view>
+             </view>
+             <view  wx:if="{{item.order_status==0}}" class="topPartBottom">
+              <view class="font priceNum" ><text style="color:#FF0000">￥{{item.actual_price/gitem.number}}</text>*{{gitem.number}}</view>  
+              <view>
+                <text class="font total">合计：<text style="color:#ff0000">￥{{item.actual_price}}</text></text>
+              </view>
+             </view>
+          </view>
+        </view>
+      </view>
+       <view class="bottomBtn" wx:if="{{item.order_status==0}}">
+            <view class="font desBtn goPay"  data-order-index="{{index}}" catchtap="payOrder" wx:if="{{item.handleOption.pay}}" >去付款</view>
+        </view>
+    </navigator>
+  </view> 
+  <view wx:if="{{orderList.length>6}}" class="loadmore">
+      <block wx:if="{{nomore}}">
+        <text>{{nomoreText}}</text>
+      </block>
+      <block wx:else>
+        <text class="iconfont icon-loading loading" space="nbsp"></text>
+        <text> {{loadmoreText}}</text>
+      </block>
+  </view>
+</view>
+
+
+
+<!-- <view class="container">
+    <view class="orders">
+        <navigator url="../orderDetail/orderDetail?id={{item.id}}" class="order" wx:for="{{orderList}}" wx:key="{{item.id}}">
+            <view class="h">
+                <view class="l">订单编号：{{item.order_sn}}</view>
+                <view class="r">{{item.order_status_text}}</view>
+            </view>
+            <view class="goods" wx:for="{{item.goodsList}}" wx:key="{{gitem.id}}" wx:for-item="gitem">
+                <view class="img">
+                    <image src="{{gitem.list_pic_url}}"></image>
+                </view>
+                <view class="info">
+                    <text class="name">{{gitem.goods_name}}</text>
+                    <text class="number">共{{gitem.number}}件商品</text>
+                </view>
+                <view class="status"></view>
+            </view>
+            <view class="b">
+                <view class="l">实付：￥{{item.actual_price}}</view>
+                <view class="r">
+                    <button class="btn" data-order-index="{{index}}" catchtap="payOrder" wx:if="{{item.handleOption.pay}}">去付款</button>
+                </view>
+            </view>
+        </navigator>
+    </view>
+
+    <view wx:if="{{orderList.length>6}}" class="loadmore">
+      <block wx:if="{{nomore}}">
+        <text>{{nomoreText}}</text>
+      </block>
+      <block wx:else>
+        <text class="iconfont icon-loading loading" space="nbsp"></text>
+        <text> {{loadmoreText}}</text>
+      </block>
+    </view>
+</view> -->

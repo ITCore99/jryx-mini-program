@@ -1,0 +1,132 @@
+page  
+{
+  width:100%;
+  height:100%;
+  background: rgba(250, 250, 250, 1);
+}
+.box
+{
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 4rpx 6rpx  20rpx rgba(18, 139, 255, 0.21);
+
+}
+.bottomBox
+{
+  width: 412rpx;
+  height:544rpx;
+  position: fixed;
+  top:278rpx;
+  left:170rpx;
+  z-index:996;
+}
+.middleBox
+{
+  width:458rpx;
+  height: 606rpx;
+  position: fixed;
+  top:194rpx;
+  left:146rpx;
+  z-index: 998;
+}
+.topBox
+{
+  width: 500rpx;
+  height: 660rpx;
+  position: fixed;
+  top:122rpx;
+  left:126rpx;
+  z-index: 1000;
+}
+.btn
+{
+  width:420rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background:linear-gradient(-90deg,rgba(65,102,255,1),rgba(103,133,255,1));
+  border-radius: 40rpx;
+  color: #FEFFFF;
+  font-family: MicrosoftYaHei;
+  font-size: 28rpx;
+  font-weight: Regular;
+  box-shadow:2rpx 6rpx 20rpx rgba(65, 102, 255,0.65);
+  position: fixed;
+  top:902rpx;
+  left:166rpx;
+}
+.topBox
+{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.topBox .avatar
+{
+  width:118rpx;
+  height: 118rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+  background: #409eff;
+  box-shadow: 0 6rpx  12rpx rgba(202, 202, 202, 1);
+  margin-top: 40rpx;
+
+}
+.font
+{
+  font-family: MicrosoftYaHei;
+  font-weight: Regular;
+  color:#353535;
+}
+.topBox .name
+{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.topBox .class
+{
+  font-size: 24rpx;
+  color:#888888;
+  margin-top: 15rpx;
+}
+.topBox .phone
+{
+  font-size:24rpx;
+  position: absolute;
+  top:295rpx;
+  left:80rpx;
+}
+.topBox .email
+{
+  font-size: 24rpx;
+  position: absolute;
+  top:350rpx;
+  left:80rpx;
+}
+.topBox .desc
+{
+  position: absolute;
+  top:400rpx;
+  left:80rpx;
+  display: flex;
+}
+.desc .introduce
+{
+  font-size: 24rpx;
+  white-space: nowrap;
+   
+}
+.desc .details
+{
+  font-size: 24rpx;
+}
+
+.topBox .slogan
+{
+  font-size: 24rpx;
+  position: absolute;
+  top:580rpx;
+  left:124rpx;
+  color:#128BFF;
+}

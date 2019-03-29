@@ -1,0 +1,107 @@
+.bgImg {
+  height:auto;
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #000; 
+  background-image: url(	https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/0922421273ad1a.png);
+}
+
+.topImg {
+  height: auto;
+  width: 96%;
+  margin: 2%;
+  background-repeat: no-repeat;
+  padding-top: 500rpx;
+  background-size: 100%;
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181217/153517560f5b0f.png);
+}
+
+.cardTypeImg {
+  height: auto;
+  color: rgba(107, 67, 42, 1);
+  line-height: 56rpx;
+  text-align: center;
+  width: 80%;
+  margin: 26rpx 10%;
+  font-family: Adobe Heiti Std R;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/125711941bbcb9.png);
+}
+
+.cardImg {
+  width: 573rpx;
+  height: 372rpx;
+  margin-left: 10%;
+}
+
+.cardTxtBg {
+  width: 94%;
+  margin: 20rpx 3% 40rpx 3%;
+  padding: 30rpx 20rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: justify;
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/1253375862e5a3.png);
+}
+
+.cardTxtBg text {
+  display: inline-block;
+  color:rgba(120, 72, 47, 1);
+  line-height: 38rpx;
+  margin-bottom: 10rpx;
+}
+.input{
+  width:464rpx;
+  height:66rpx;
+  margin: 0 auto 20rpx auto; 
+  padding-left: 10rpx;
+  background:rgba(255,255,255,1);
+  border:1rpx solid rgba(18,139,255,1);
+  border-radius:6rpx;
+}
+.btn {
+  width: 500rpx;
+  height: 80rpx;
+  color: #FEFFFF;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  margin: 45rpx auto;
+  background: linear-gradient(-90deg, rgba(65, 102, 255, 1), rgba(103, 133, 255, 1));
+  border-radius: 40rpx;
+}
+.content{
+  padding: 2%;
+}
+.content text{
+  display: block;
+  padding-left: 60rpx;
+  color: #fff;
+  line-height: 45rpx;
+  background-size: 45rpx;
+  margin-bottom: 10rpx;
+ 
+  background-repeat: no-repeat;
+}
+.address{
+  width: 100%;
+  margin-top: 20rpx;
+  height: 230rpx;
+  border-radius:6rpx;
+}
+.content text:nth-child(1){
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/130405889477a0.png)
+}
+.content text:nth-child(2){
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/130405889477a0.png)
+}
+.content text:nth-child(3){
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/130405889477a0.png)
+}
+.content text:nth-child(4){
+  background-image: url(		https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/13051264209fc6.png)
+}
+.content text:nth-child(5){
+  background-image: url(https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190112/130552768e7c06.png)
+}

@@ -1,0 +1,90 @@
+ <scroll-view style='height:{{windowHeight}}px' scroll-y scroll-with-animation="{{true}}">
+<view class='continer' id="container">
+  <!---头部区域-->
+  <view class="topContiner">
+  <view class="topMain">
+  <view class='userInfoContainer'>
+   <button class="avatarContanier" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >
+      <image class="avatar"  wx:if="{{userInfo && userInfo.avatarUrl}}" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+   </button>
+   <view class='userInfo'>
+     <view class="usernameContainer">
+       <view class="nickName" >{{userInfo.nickName }}</view>
+       <image class="vipIcon" src="{{vipInfo.status==vipState ? 'https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190115/1015389404a34a.png' :'  https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/132713710a3dcc.png'}}" wx:if="{{vipInfo}}"></image>
+     </view>
+      <view class="vipClass">
+        <view class='vip'>
+          <image class="icon" src="{{userVip[0]==1 ? '../../../static/icon/mine/geren@2x.png' : 'https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/115621514fa577.png'}}"></image>
+        </view>
+        <view class='vip' >
+          <image class="icon" src="{{userVip[1]==2 ? '../../../static/icon/mine/family@2x.png' : 'https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/115710687f91f3.png'}}"></image>
+        </view>
+        <view class='vip'>
+          <image class="icon" src="{{userVip[2]==3 ?'../../../static/icon/mine/business@2x.png': 'https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/115804168bf04.png'}}"></image>
+        </view>
+        <view class='vip'>
+          <image class="icon" src="{{userVip[3]==4 ?'../../../static/icon/mine/company@2x.png' : 'https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190114/115828270f947.png'}}"></image>
+        </view>
+     </view>
+     </view>
+   </view>
+  <!--订单部分-->
+  <view class="orderPart">
+    <view class="orderHeader">
+        <image class="icon" src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181219/13101415781f77.png"></image> 
+        <text class="title">订单中心</text>
+    </view>
+    <view class="tabbar">
+      <view class="item" wx:for="{{orderList}}" wx:key="{{index}}" wx:for-item="item">
+         <view bindtap='jumpOrder' data-id="{{item.id}}">
+             <image class="icon" src="{{item.icon}}" style='{{item.style}}'></image>
+         </view>
+         <text class="name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+  <image class='QRICon' src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190121/113948246b4c3.png" bindtap='jump'></image>
+  <image class="QRGoICon" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190121/114243334a03fa.png"  bindtap='jump'></image>
+</view>
+    <!--下方列表区--->
+    <view class='ListContainer'>
+         <view class='itemContainer'>
+            <navigator class='item' wx:for="{{listData}}" wx:for-item="item" wx:key="{{index}}" url="{{item.url}}">
+               <view class="content">
+                  <view class='itmeLeft'>
+                     <image class='itemICon' src="{{item.icon}}"></image> 
+                     <text class='itemTitle'>{{item.title}}</text>
+                  </view>
+                  <view class='itemRight'>
+                      <image class='backICon' src="https://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20181220/103321832e9774.png"></image>
+                  </view>
+               </view>
+            </navigator>
+         </view> 
+    </view>
+    <view class="recommendContainer">
+      <view class="main">
+        <view class="leftContain">
+           <image class="topImg" src="http://hldfiles.oss-cn-qingdao.aliyuncs.com/selectholiday/upload/20190111/14414589724628.png"></image>
+           <text  class="topText" wx:if="{{vipInfo}}">已为您节省{{vipInfo.discount}}元</text>
+          <text  class="topText" wx:else>成为会员享受更多的优惠</text>
+        </view>
+        <view class="recommendBtn" bindtap='goBuyOrRenew'>{{vipInfo ? '立即续费' : '成为会员'}} </view>
+      </view>
+      <view class="recommendRow1">
+         <view class="item" wx:for="{{cardData1}}" wx:for-item="item" wx:key="{{index}}">
+            <image class="centerIcon" src="{{item.url}}"  style="{{item.style}}"></image>
+            <text class="centerTitle">{{item.title}}</text>
+         </view>
+      </view>
+        <view class="recommendRow1">
+         <view class="item" wx:for="{{cardData2}}" wx:key="{{index}}" wx:for-item="item">
+            <image class="centerIcon" src="{{item.url}}" style="{{item.style}}"></image>
+            <text class="centerTitle">{{item.title}}</text>
+         </view>
+      </view>
+    </view>
+</view>
+ 
+</scroll-view> 

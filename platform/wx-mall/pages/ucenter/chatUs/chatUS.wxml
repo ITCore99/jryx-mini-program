@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="item">
+    <view class="title">客服电话</view>
+    <view class="detail">400-6708-018</view>
+  </view>
+  <view class="item">
+    <view class="title">客服邮箱</view>
+    <view class="detail">1185516016@qq.com</view>
+  </view>
+  <view class="item">
+    <view class="title">客服QQ</view>
+    <view class="detail">1185516016</view>
+  </view>
+  <view class="item">
+    <view class="title">官方网址</view>
+    <view class="detail">www.selectholiday.cn</view>
+  </view>
+</view>
